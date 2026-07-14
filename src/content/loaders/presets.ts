@@ -26,6 +26,7 @@ export function resolveEntryVisual(entry: TimelineEntry): Preset {
     imageTreatment: preset.imageTreatment,
     titleFont: preset.titleFont,
     yearFont: preset.yearFont,
+    ghostYear: entry.ghostYear ?? preset.ghostYear,
   };
 }
 

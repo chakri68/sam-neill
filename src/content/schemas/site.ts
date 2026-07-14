@@ -48,10 +48,10 @@ export const siteSchema = z.object({
     /** Closing fan tribute rendered beneath the text lines. */
     signoff: z.string().optional(),
   }),
+  /** The closing words at the very bottom of the page. */
   finalTribute: z.object({
     lines: z.array(z.string()),
-    cta: z.string(),
-    portrait: z.string(),
+    dates: z.string().optional(),
   }),
   footer: z.object({
     copy: z.string(),

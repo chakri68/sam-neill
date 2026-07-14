@@ -16,7 +16,7 @@ export function WatchSection({ id, eyebrow, title, description, videos }: WatchS
   return (
     <section
       id={id}
-      className="mx-auto w-full max-w-[960px] px-[var(--space-page-mobile)] py-24 sm:px-[var(--space-page-tablet)] md:py-32"
+      className="mx-auto w-full max-w-[1200px] px-[var(--space-page-mobile)] py-24 sm:px-[var(--space-page-tablet)] md:py-32"
     >
       <Reveal variant="rise" className="mb-14 text-center">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}

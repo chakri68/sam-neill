@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cormorant_Garamond, Bebas_Neue } from "next/font/google";
+import { Geist_Mono, Cormorant_Garamond, Bebas_Neue, Lato } from "next/font/google";
 import "./globals.css";
 import { site } from "@/src/content/loaders/site";
 import { getImage } from "@/src/content/loaders/assets";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// UI face for nav, eyebrows, captions, and labels — quietly formal, and
+// clearly distinct from both the display and editorial voices.
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -53,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${bebas.variable} h-full antialiased`}
+      className={`${lato.variable} ${geistMono.variable} ${cormorant.variable} ${bebas.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

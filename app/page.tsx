@@ -1,4 +1,12 @@
-import { site, getImage, timeline, videos, videosIntro, gallery, audio } from "@/src/content";
+import {
+  site,
+  getImage,
+  timeline,
+  videos,
+  videosIntro,
+  gallery,
+  audio,
+} from "@/src/content";
 import { Nav } from "@/src/components/shared/Nav";
 import { AudioToggle } from "@/src/components/shared/AudioToggle";
 import { Hero } from "@/src/components/landing/Hero";
@@ -6,6 +14,7 @@ import { TimelineIntro } from "@/src/components/timeline/TimelineIntro";
 import { Timeline } from "@/src/components/timeline/Timeline";
 import { WatchSection } from "@/src/components/watch/WatchSection";
 import { GallerySection } from "@/src/components/gallery/GallerySection";
+import { FinalTribute } from "@/src/components/landing/FinalTribute";
 
 /**
  * Phase 1: the landing hero and full timeline, composed entirely from
@@ -22,9 +31,13 @@ export default function Home() {
 
   return (
     <>
-      <Nav brand={site.nav.brand} links={navLinks} menuLabel={site.nav.menuLabel} />
+      <Nav
+        brand={site.nav.brand}
+        links={navLinks}
+        menuLabel={site.nav.menuLabel}
+      />
 
-      <main className="font-editorial text-bone">
+      <main className="font-editorial text-bone relative">
         <Hero
           id="hero"
           name={site.hero.name}
@@ -66,7 +79,13 @@ export default function Home() {
           images={gallery.images}
         />
 
-        <footer className="border-t border-bone/10 px-[var(--space-page-mobile)] py-12 text-center font-ui text-xs text-muted sm:px-[var(--space-page-tablet)]">
+        <FinalTribute
+          id="final-tribute"
+          lines={site.finalTribute.lines}
+          dates={site.finalTribute.dates}
+        />
+
+        <footer className="px-[var(--space-page-mobile)] py-4 text-center font-ui text-xs text-muted sm:px-[var(--space-page-tablet)] absolute bottom-0 left-0 right-0">
           {site.footer.copy}
         </footer>
       </main>

@@ -26,15 +26,32 @@ export const videosSchema = z.object({
 
 export type Videos = z.infer<typeof videosSchema>;
 
-/** A card as consumed by components: the pasted link resolved to an id. */
+/** A card as consumed by components: the pasted link resolved to ids. */
 export type TributeVideo = z.infer<typeof tributeVideoSchema> & {
   youtubeId: string | null;
+  /** Set when the link carries a playlist — alone or alongside a video id. */
+  playlistId: string | null;
 };
 
 /**
  * Extract the 11-character video id from anything YouTube-shaped:
  * a bare id, watch?v=, youtu.be/, /embed/, /shorts/, /live/.
  */
+/**
+ * Extract a playlist id from a YouTube URL — either a /playlist link or the
+ * `list` param riding along on a watch link.
+ */
+export function youtubePlaylistFrom(input: string): string | null {
+  try {
+    const url = new URL(input.trim());
+    const list = url.searchParams.get("list");
+    if (list && /^[\w-]{10,}$/.test(list)) return list;
+  } catch {
+    // bare ids and non-URLs carry no playlist
+  }
+  return null;
+}
+
 export function youtubeIdFrom(input: string): string | null {
   const trimmed = input.trim();
   if (!trimmed) return null;

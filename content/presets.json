@@ -4,49 +4,49 @@
       "layout": "image-right",
       "background": "charcoal",
       "imageTreatment": "warm-archive",
-      "titleFont": "editorial",
-      "yearFont": "mono"
+      "titleFont": "display",
+      "yearFont": "display"
     },
     "career-origin": {
       "layout": "image-right",
       "background": "charcoal",
       "imageTreatment": "warm-archive",
-      "titleFont": "editorial",
-      "yearFont": "mono"
+      "titleFont": "display",
+      "yearFont": "display"
     },
     "career-breakthrough": {
       "layout": "image-left",
       "background": "charcoal",
       "imageTreatment": "warm-archive",
       "titleFont": "display",
-      "yearFont": "mono"
+      "yearFont": "display"
     },
     "career-milestone": {
       "layout": "image-right",
       "background": "charcoal",
       "imageTreatment": "warm-archive",
       "titleFont": "display",
-      "yearFont": "mono"
+      "yearFont": "display"
     },
     "television-feature": {
       "layout": "image-right",
       "background": "charcoal",
       "imageTreatment": "cinematic",
       "titleFont": "display",
-      "yearFont": "mono"
+      "yearFont": "display"
     },
     "honour": {
       "layout": "minimal",
       "background": "charcoal",
       "imageTreatment": "warm-archive",
       "titleFont": "display",
-      "yearFont": "mono"
+      "yearFont": "display"
     },
     "memorial": {
       "layout": "text-only",
       "background": "black",
       "imageTreatment": "cinematic",
-      "titleFont": "editorial",
+      "titleFont": "display",
       "yearFont": "display"
     },
     "film-feature": {
@@ -61,20 +61,20 @@
       "background": "charcoal",
       "imageTreatment": "warm-archive",
       "titleFont": "display",
-      "yearFont": "mono"
+      "yearFont": "display"
     },
     "quote-interlude": {
       "layout": "quote",
       "background": "black",
       "imageTreatment": "monochrome",
       "titleFont": "editorial",
-      "yearFont": "mono"
+      "yearFont": "display"
     },
     "tribute-final": {
       "layout": "text-only",
       "background": "black",
       "imageTreatment": "cinematic",
-      "titleFont": "editorial",
+      "titleFont": "display",
       "yearFont": "display"
     }
   }

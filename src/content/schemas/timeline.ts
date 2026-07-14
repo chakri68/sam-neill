@@ -45,6 +45,8 @@ export const timelineEntrySchema = z.object({
   // Absent → undefined (so a preset can supply the layout); invalid → safe
   // fallback; valid → itself. Order matters: optional() before catch().
   layout: z.enum(TIMELINE_LAYOUTS).optional().catch("text-only"),
+  /** Echo the year behind the image. Overrides the preset when set. */
+  ghostYear: z.boolean().optional(),
   images: z.array(imageAssetSchema).default([]),
   // Optional decorative mark (e.g. a film logo) rendered as a small corner
   // badge over the entry. Path into /public; transparent PNG expected.
@@ -65,6 +67,16 @@ export const timelineEntrySchema = z.object({
           .enum(["article", "video", "interview", "external"])
           .catch("external")
           .optional(),
+      }),
+    )
+    .default([]),
+  /** Where the entry's claims come from — rendered as a small ⓘ popover. */
+  sources: z
+    .array(
+      z.object({
+        title: z.string(),
+        publisher: z.string().optional(),
+        url: z.string(),
       }),
     )
     .default([]),

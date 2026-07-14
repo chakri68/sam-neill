@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { TributeImage } from "@/src/components/shared/TributeImage";
 import { Reveal } from "@/src/components/shared/Reveal";
+import { SourcesPopover } from "@/src/components/shared/SourcesPopover";
 import { resolveEntryVisual, type Preset } from "@/src/content/loaders/presets";
 import { backgroundVar } from "@/src/lib/theme/background";
 import type { TimelineEntry as Entry } from "@/src/content/schemas/timeline";
@@ -98,9 +99,11 @@ function Standard({ entry, visual, side }: { entry: Entry; visual: Preset; side:
             portrait ? "mx-auto w-full max-w-[24rem] md:max-w-[26rem]" : ""
           } ${TREATMENT[visual.imageTreatment]}`}
         >
-          <span className={`timeline-year timeline-year--ghost ${YEAR_FONT[visual.yearFont]} text-[22vw] md:text-[10vw]`}>
-            {yearOf(entry)}
-          </span>
+          {visual.ghostYear ? (
+            <span className={`timeline-year timeline-year--ghost ${YEAR_FONT[visual.yearFont]} text-[22vw] md:text-[10vw]`}>
+              {yearOf(entry)}
+            </span>
+          ) : null}
           <TributeImage
             asset={image}
             aspectRatio="3 / 2"
@@ -122,6 +125,7 @@ function Standard({ entry, visual, side }: { entry: Entry; visual: Preset; side:
         {entry.longDescription ? (
           <p className="mt-4 max-w-prose text-lg text-muted">{entry.longDescription}</p>
         ) : null}
+        <SourcesPopover sources={entry.sources} />
       </Reveal>
     </article>
   );
@@ -181,6 +185,7 @@ function FilmFeature({ entry, visual }: { entry: Entry; visual: Preset }) {
                 ) : null}
               </blockquote>
             ) : null}
+            <SourcesPopover sources={entry.sources} />
           </Reveal>
         </div>
       </div>
@@ -210,6 +215,7 @@ function QuoteInterlude({ entry, visual }: { entry: Entry; visual: Preset }) {
               {quote.attribution}
             </footer>
           ) : null}
+          <SourcesPopover sources={entry.sources} />
         </blockquote>
       </Reveal>
     </article>
@@ -228,6 +234,7 @@ function TextOnly({ entry, visual }: { entry: Entry; visual: Preset }) {
           {entry.title}
         </h3>
         <p className="mx-auto mt-6 max-w-2xl text-xl text-paper">{entry.description}</p>
+        <SourcesPopover sources={entry.sources} />
       </Reveal>
     </article>
   );
@@ -251,6 +258,7 @@ function SplitImage({ entry, visual }: { entry: Entry; visual: Preset }) {
           <p className="mt-2 font-ui text-sm uppercase tracking-[0.14em] text-amber">{entry.subtitle}</p>
         ) : null}
         <p className="mx-auto mt-5 max-w-2xl text-xl text-paper">{entry.description}</p>
+        <SourcesPopover sources={entry.sources} />
       </Reveal>
       <div className={`mt-12 grid gap-6 md:grid-cols-2 ${TREATMENT[visual.imageTreatment]}`}>
         {images.map((image, i) => (
@@ -290,7 +298,10 @@ function Minimal({ entry, visual }: { entry: Entry; visual: Preset }) {
             </div>
           </div>
           <div className="mt-5 grid gap-6 md:grid-cols-[1fr_auto] md:items-start">
-            <p className="max-w-prose text-lg text-paper">{entry.description}</p>
+            <div>
+              <p className="max-w-prose text-lg text-paper">{entry.description}</p>
+              <SourcesPopover sources={entry.sources} />
+            </div>
             {image ? (
               <div className={`w-full md:w-56 ${TREATMENT[visual.imageTreatment]}`}>
                 <TributeImage

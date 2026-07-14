@@ -7,22 +7,95 @@
   },
   "videos": [
     {
-      "id": "video-1",
-      "title": "Paste a YouTube link for this card",
-      "note": "content/videos.json — the \"youtube\" field takes a full URL or a video id",
-      "youtube": ""
+      "id": "jurassic-park-1",
+      "title": "The Making of Jurassic Park | Full Documentary",
+      "note": "Sam Neill on set of Jurassic Park",
+      "youtube": "https://youtu.be/JNJ2oYvzSCc?si=IGseSuReLmGUAynw"
     },
     {
-      "id": "video-2",
-      "title": "Paste a YouTube link for this card",
-      "note": "Cards render in this order — add or remove entries freely",
-      "youtube": ""
+      "id": "sam-neill-1",
+      "title": "REWIND: Sam Neill and Bryan Brown catch up over cocktails | Today Show Australia",
+      "note": "Sam Neill with Bryan Brown on the Today Show Australia",
+      "youtube": "https://youtu.be/VFxCvxUk7c0?si=aD6B1L4VZlow-bYG"
     },
     {
-      "id": "video-3",
-      "title": "Paste a YouTube link for this card",
-      "note": "Titles and notes are yours to edit",
-      "youtube": ""
+      "id": "sam-neill-2",
+      "title": "Sam Neill's candid thoughts on Jacinda Ardern's leadership | 30 with Guyon Espiner | RNZ",
+      "note": "Sam Neill interview at his farm in New Zealand with Guyon Espiner on RNZ, speaking about New Zealand politics and his life in Hollywood",
+      "youtube": "https://youtu.be/yx4z5bK4U1w?si=SnUPFG_J6RQH5T2s"
+    },
+    {
+      "id": "sam-neill-4",
+      "title": "Sam Neill Was Not Ready for Anika Moa | Anika Moa Unleashed",
+      "note": "Sam Neill on Anika Moa Unleashed talking about his wine, competing on who says the most curse words, and his love of New Zealand",
+      "youtube": "https://youtu.be/gdKhtr4zDus?si=Q5skIF8zR5G99crc"
+    },
+    {
+      "id": "sam-neill-5",
+      "title": "Russell Goes Day Drinking With Sam Neill | Russell Howard Stands Up To The World",
+      "note": "One of my favorite interviews of Sam Neill, speaking about his farm, pets, wine, fatherhood",
+      "youtube": "https://youtu.be/UD3GxwyQgew?si=GdjoYME9I9v4PPcP"
+    },
+
+    {
+      "id": "sam-neill-6",
+      "title": "Cooking with Sam",
+      "note": "Cooking with Sam Neill, a short vlog of Sam cooking in his own channel - Two Paddocks",
+      "youtube": "https://youtu.be/YmEhD0jYj8w?si=wN6zJNtKtrhKPt5D"
+    },
+    {
+      "id": "sam-neill-7",
+      "title": "Sam Neill & Bryan Brown critique each other's acting",
+      "note": "Sam Neill being funny for 12mins straight",
+      "youtube": "https://youtu.be/5kwlsrc2-YE?si=JCNTO3a3Nw1WSt2x"
+    },
+    {
+      "id": "sam-neill-8",
+      "title": "Sam Neill talks acting, winemaking and life during COVID-19 | Australian Story",
+      "note": "Sam Neill on talking about his acting career, winemaking, and life during COVID-19. A great interview with Sam Neill, and this has the entire life story of Sam Neill, from his childhood to his acting career, and his life in New Zealand",
+      "youtube": "https://youtu.be/ScAktnImPbQ?si=TPIXXWcZdW11BvA1"
+    },
+    {
+      "id": "sam-neill-9",
+      "title": "Cinema Quarantino",
+      "note": "A collection of Sam Neill's videos he posted on Two Paddocks with his songs, Uke and short movies he made during quarantine",
+      "youtube": "https://www.youtube.com/playlist?list=PLAggKW2MSi2eL-BKzEJM7QUOdQJcmKF_u"
+    },
+    {
+      "id": "sam-neill-10",
+      "title": "Sam Neill",
+      "note": "A collection of Sam Neill's videos he posted on instagram and Twitter",
+      "youtube": "https://www.youtube.com/watch?v=dlsOft9KspA&list=PLLLiEya-Q4RTlC_2keGnQC_hZG0Z_lVDP"
+    },
+    {
+      "id": "graham-norton-1",
+      "title": "S20 E02 - The Graham Norton Show | Full Episode | Danny DeVito, Ewan McGregor, Sam Neill",
+      "note": "Sam Neill on The Graham Norton Show",
+      "youtube": "https://youtu.be/qbW6buV2vMM?si=ExU7cR9zylEgmic3"
+    },
+    {
+      "id": "graham-norton-2",
+      "title": "Sam Neill Talks Us Through His Odd Lamb Names - The Graham Norton Show",
+      "note": "Sam Neill on The Graham Norton Show talking about his farm",
+      "youtube": "https://youtu.be/yKwdMOik2SM?si=1AepgUZUf5JTt3HC"
+    },
+    {
+      "id": "graham-norton-3",
+      "title": "Sam Neill Shows Off His Bulls ‘Graham Norton’ & ‘Jimmy Nesbitt’ | The Graham Norton Show",
+      "note": "Sam Neill on The Graham Norton Show showing off his bulls",
+      "youtube": "https://youtu.be/zORglLEn82g?si=paik9ZBVwWs_-Dp3"
+    },
+    {
+      "id": "graham-norton-4",
+      "title": "FULL Graham Norton Show 29/1/2021 Sam Neill, Billie Piper, James Nesbitt, Andi Osho, Tom Jones",
+      "note": "Full episode of The Graham Norton Show with Sam Neill, Billie Piper, James Nesbitt, Andi Osho, and Tom Jones",
+      "youtube": "https://youtu.be/v8Ri7DxeqZw?si=-ETpc4BjLQdE0CJ4"
+    },
+    {
+      "id": "klayton-fioriti-1",
+      "title": "Rest in Peace Sam Neill",
+      "note": "A tribute to Sam Neill by Klayton Fioriti and about his experience growing up with Sam Neill's movies and how they impacted his life",
+      "youtube": "https://youtu.be/x4ADhtk6LpY?si=rUt9WR-XStpbitn9"
     }
   ]
 }

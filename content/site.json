@@ -26,13 +26,15 @@
     "description": "A living archive of the moments his work left behind."
   },
   "timelineEnding": {
-    "text": ["Every role became", "someone's memory."],
-    "signoff": "RIP, dinosaur man. \nThanks for all the memories. You'll always be in our hearts."
+    "text": ["Every role became", "someone's memory."]
   },
   "finalTribute": {
-    "lines": ["Actors leave.", "Stories don't.", "Memories certainly don't."],
-    "cta": "Share yours",
-    "portrait": "finalTributePortrait"
+    "lines": [
+      "RIP, dinosaur man.",
+      "Thanks for all the memories.",
+      "You'll always be in our hearts."
+    ],
+    "dates": "1947 — 2026"
   },
   "footer": {
     "copy": "A fan-made tribute. Not affiliated with Sam Neill or any studio. Photography credited to its owners.",
