@@ -72,7 +72,6 @@ export function AudioToggle({ tracks, anecdote }: AudioToggleProps) {
     el.play()
       .then(() => fadeTo(BASE_VOLUME, FADE_IN_MS))
       .catch(() => setPlaying(false));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, playing]);
 
   useEffect(() => {
