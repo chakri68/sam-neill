@@ -1317,6 +1317,7 @@ body:has(.ti-lightbox[open]) {
   height: min(48vh, 26rem);
 }
 .quote-card__body {
+  max-height: 100%;
   width: 100%;
   padding: 2.2rem 2.4rem 2rem;
   border-radius: var(--radius-popup);
@@ -1326,7 +1327,7 @@ body:has(.ti-lightbox[open]) {
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
   animation: quote-in 480ms var(--ease-cinematic);
   overflow-y: auto;
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
   display: flex;
   flex-direction: column;
 }
