@@ -48,7 +48,13 @@ function EntryBadge({ src, className }: { src: string; className?: string }) {
       aria-hidden
       className={`pointer-events-none absolute z-20 block select-none opacity-80 drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] ${className ?? ""}`}
     >
-      <Image src={src} alt="" width={160} height={98} className="h-auto w-full" />
+      <Image
+        src={src}
+        alt=""
+        width={160}
+        height={98}
+        className="h-auto w-full"
+      />
     </span>
   );
 }
@@ -81,16 +87,30 @@ export function TimelineEntry({ entry }: { entry: Entry }) {
  * Standard entry — year + copy in one column, image in the other,
  * with the year echoed as a ghost behind the frame.
  * ---------------------------------------------------------------- */
-function Standard({ entry, visual, side }: { entry: Entry; visual: Preset; side: "left" | "right" }) {
+function Standard({
+  entry,
+  visual,
+  side,
+}: {
+  entry: Entry;
+  visual: Preset;
+  side: "left" | "right";
+}) {
   const image = entry.images[0];
   const imageFirst = side === "left";
   // Portrait sources keep their shape in a narrower frame instead of being
   // cropped into the default landscape one.
   const portrait = isPortrait(image?.aspectRatio);
   return (
-    <article id={entry.id} className="relative grid items-center gap-10 md:grid-cols-2 md:gap-16">
+    <article
+      id={entry.id}
+      className="relative grid items-center gap-10 md:grid-cols-2 md:gap-16"
+    >
       {entry.badge ? (
-        <EntryBadge src={entry.badge} className="right-3 top-3 w-14 md:right-4 md:top-4 md:w-20" />
+        <EntryBadge
+          src={entry.badge}
+          className="right-3 top-3 w-14 md:right-4 md:top-4 md:w-20"
+        />
       ) : null}
       {image ? (
         <Reveal
@@ -100,30 +120,52 @@ function Standard({ entry, visual, side }: { entry: Entry; visual: Preset; side:
           } ${TREATMENT[visual.imageTreatment]}`}
         >
           {visual.ghostYear ? (
-            <span className={`timeline-year timeline-year--ghost ${YEAR_FONT[visual.yearFont]} text-[22vw] md:text-[10vw]`}>
+            <span
+              className={`timeline-year timeline-year--ghost ${YEAR_FONT[visual.yearFont]} text-[22vw] md:text-[10vw]`}
+            >
               {yearOf(entry)}
             </span>
           ) : null}
           <TributeImage
             asset={image}
             aspectRatio="3 / 2"
-            sizes={portrait ? "(max-width: 768px) 100vw, 416px" : "(max-width: 768px) 100vw, 50vw"}
+            sizes={
+              portrait
+                ? "(max-width: 768px) 100vw, 416px"
+                : "(max-width: 768px) 100vw, 50vw"
+            }
             fallbackLabel={entry.title}
           />
         </Reveal>
       ) : null}
 
-      <Reveal variant="rise" delay={120} className={imageFirst ? "md:order-2" : "md:order-1"}>
-        <p className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-5xl md:text-7xl`}>
+      <Reveal
+        variant="rise"
+        delay={120}
+        className={imageFirst ? "md:order-2" : "md:order-1"}
+      >
+        <p
+          className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-5xl md:text-7xl`}
+        >
           {yearOf(entry)}
         </p>
-        <h3 className={`mt-4 text-bone text-3xl md:text-4xl ${TITLE_FONT[visual.titleFont]}`}>{entry.title}</h3>
+        <h3
+          className={`mt-4 text-bone text-3xl md:text-4xl ${TITLE_FONT[visual.titleFont]}`}
+        >
+          {entry.title}
+        </h3>
         {entry.subtitle ? (
-          <p className="mt-2 font-ui text-sm uppercase tracking-[0.14em] text-amber">{entry.subtitle}</p>
+          <p className="mt-2 font-ui text-sm uppercase tracking-[0.14em] text-amber">
+            {entry.subtitle}
+          </p>
         ) : null}
-        <p className="mt-5 max-w-prose text-xl text-paper">{entry.description}</p>
+        <p className="mt-5 max-w-prose text-xl text-paper">
+          {entry.description}
+        </p>
         {entry.longDescription ? (
-          <p className="mt-4 max-w-prose text-lg text-muted">{entry.longDescription}</p>
+          <p className="mt-4 max-w-prose text-lg text-muted">
+            {entry.longDescription}
+          </p>
         ) : null}
         <SourcesPopover sources={entry.sources} />
       </Reveal>
@@ -143,35 +185,61 @@ function FilmFeature({ entry, visual }: { entry: Entry; visual: Preset }) {
       style={{ backgroundColor: backgroundVar(visual.background) }}
     >
       {image ? (
-        <div className={`film-feature__media ${TREATMENT[visual.imageTreatment]}`}>
-          <TributeImage asset={image} priority={entry.featured} bare sizes="100vw" className="h-full !rounded-none" fallbackLabel={entry.title} />
+        <div
+          className={`film-feature__media ${TREATMENT[visual.imageTreatment]}`}
+        >
+          <TributeImage
+            asset={image}
+            priority={entry.featured}
+            bare
+            sizes="100vw"
+            className="h-full !rounded-none"
+            fallbackLabel={entry.title}
+          />
         </div>
       ) : null}
       <div className="film-feature__scrim" />
       {entry.badge ? (
-        <EntryBadge src={entry.badge} className="right-5 top-20 w-24 md:right-10 md:top-24 md:w-32" />
+        <EntryBadge
+          src={entry.badge}
+          className="right-5 top-20 w-24 md:right-10 md:top-24 md:w-32"
+        />
       ) : null}
       {/* The backdrop renders bare (no caption chrome), so its caption/credit
           surfaces as a quiet corner line instead. */}
       {image?.caption || image?.credit ? (
-        <p className="film-feature__credit">
+        <p className={`film-feature__credit ${PAGE_PAD}`}>
           {[image.caption, image.credit].filter(Boolean).join(" — ")}
         </p>
       ) : null}
 
-      <div className={`relative z-10 mx-auto w-full max-w-[1440px] ${PAGE_PAD}`}>
+      <div
+        className={`relative z-10 mx-auto w-full max-w-[1440px] ${PAGE_PAD}`}
+      >
         <div className="film-feature__content flex min-h-screen flex-col justify-end pb-24 md:justify-center">
-          <span className={`timeline-year timeline-year--backdrop ${YEAR_FONT[visual.yearFont]} whitespace-nowrap text-bone/15 text-[15vw] leading-none md:text-[8.5vw]`}>
+          <span
+            className={`timeline-year timeline-year--backdrop ${YEAR_FONT[visual.yearFont]} whitespace-nowrap text-bone/15 text-[15vw] leading-none md:text-[8.5vw]`}
+          >
             {yearOf(entry)}
           </span>
           <Reveal variant="rise-lg" className="-mt-[3vw]">
-            <h3 className={`text-bone text-[clamp(2.5rem,7vw,6rem)] ${TITLE_FONT[visual.titleFont]}`}>{entry.title}</h3>
+            <h3
+              className={`text-bone text-[clamp(2.5rem,7vw,6rem)] ${TITLE_FONT[visual.titleFont]}`}
+            >
+              {entry.title}
+            </h3>
             {entry.subtitle ? (
-              <p className="mt-3 font-ui text-sm uppercase tracking-[0.16em] text-amber">{entry.subtitle}</p>
+              <p className="mt-3 font-ui text-sm uppercase tracking-[0.16em] text-amber">
+                {entry.subtitle}
+              </p>
             ) : null}
-            <p className="mt-6 max-w-xl text-2xl text-paper">{entry.description}</p>
+            <p className="mt-6 max-w-xl text-2xl text-paper">
+              {entry.description}
+            </p>
             {entry.longDescription ? (
-              <p className="mt-4 max-w-xl text-lg text-muted">{entry.longDescription}</p>
+              <p className="mt-4 max-w-xl text-lg text-muted">
+                {entry.longDescription}
+              </p>
             ) : null}
             {entry.quote ? (
               <blockquote className="mt-10 max-w-xl border-l-2 border-amber/60 pl-5">
@@ -229,11 +297,19 @@ function TextOnly({ entry, visual }: { entry: Entry; visual: Preset }) {
   return (
     <article id={entry.id} className="py-16 text-center">
       <Reveal variant="rise" className="line-shield mx-auto max-w-3xl">
-        <p className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-4xl md:text-6xl`}>{yearOf(entry)}</p>
-        <h3 className={`mx-auto mt-4 max-w-3xl text-bone text-3xl md:text-5xl ${TITLE_FONT[visual.titleFont]}`}>
+        <p
+          className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-4xl md:text-6xl`}
+        >
+          {yearOf(entry)}
+        </p>
+        <h3
+          className={`mx-auto mt-4 max-w-3xl text-bone text-3xl md:text-5xl ${TITLE_FONT[visual.titleFont]}`}
+        >
           {entry.title}
         </h3>
-        <p className="mx-auto mt-6 max-w-2xl text-xl text-paper">{entry.description}</p>
+        <p className="mx-auto mt-6 max-w-2xl text-xl text-paper">
+          {entry.description}
+        </p>
         <SourcesPopover sources={entry.sources} />
       </Reveal>
     </article>
@@ -247,20 +323,33 @@ function SplitImage({ entry, visual }: { entry: Entry; visual: Preset }) {
   const images = entry.images.slice(0, 2);
   return (
     <article id={entry.id} className="relative">
-      <Reveal variant="rise" className="line-shield mx-auto max-w-3xl text-center">
-        <p className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-5xl md:text-7xl`}>
+      <Reveal
+        variant="rise"
+        className="line-shield mx-auto max-w-3xl text-center"
+      >
+        <p
+          className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-5xl md:text-7xl`}
+        >
           {yearOf(entry)}
         </p>
-        <h3 className={`mx-auto mt-4 max-w-3xl text-bone text-3xl md:text-5xl ${TITLE_FONT[visual.titleFont]}`}>
+        <h3
+          className={`mx-auto mt-4 max-w-3xl text-bone text-3xl md:text-5xl ${TITLE_FONT[visual.titleFont]}`}
+        >
           {entry.title}
         </h3>
         {entry.subtitle ? (
-          <p className="mt-2 font-ui text-sm uppercase tracking-[0.14em] text-amber">{entry.subtitle}</p>
+          <p className="mt-2 font-ui text-sm uppercase tracking-[0.14em] text-amber">
+            {entry.subtitle}
+          </p>
         ) : null}
-        <p className="mx-auto mt-5 max-w-2xl text-xl text-paper">{entry.description}</p>
+        <p className="mx-auto mt-5 max-w-2xl text-xl text-paper">
+          {entry.description}
+        </p>
         <SourcesPopover sources={entry.sources} />
       </Reveal>
-      <div className={`mt-12 grid gap-6 md:grid-cols-2 ${TREATMENT[visual.imageTreatment]}`}>
+      <div
+        className={`mt-12 grid gap-6 md:grid-cols-2 ${TREATMENT[visual.imageTreatment]}`}
+      >
         {images.map((image, i) => (
           <Reveal key={image.src + i} variant="scale" delay={i * 120}>
             <TributeImage
@@ -287,23 +376,35 @@ function Minimal({ entry, visual }: { entry: Entry; visual: Preset }) {
       <Reveal variant="rise">
         <div className="line-shield border-t border-amber/25 pt-8">
           <div className="flex items-baseline gap-5">
-            <p className={`timeline-year ${YEAR_FONT[visual.yearFont]} shrink-0 text-amber text-3xl md:text-4xl`}>
+            <p
+              className={`timeline-year ${YEAR_FONT[visual.yearFont]} shrink-0 text-amber text-3xl md:text-4xl`}
+            >
               {yearOf(entry)}
             </p>
             <div>
-              <h3 className={`text-bone text-2xl md:text-3xl ${TITLE_FONT[visual.titleFont]}`}>{entry.title}</h3>
+              <h3
+                className={`text-bone text-2xl md:text-3xl ${TITLE_FONT[visual.titleFont]}`}
+              >
+                {entry.title}
+              </h3>
               {entry.subtitle ? (
-                <p className="mt-1 font-ui text-xs uppercase tracking-[0.14em] text-amber">{entry.subtitle}</p>
+                <p className="mt-1 font-ui text-xs uppercase tracking-[0.14em] text-amber">
+                  {entry.subtitle}
+                </p>
               ) : null}
             </div>
           </div>
           <div className="mt-5 grid gap-6 md:grid-cols-[1fr_auto] md:items-start">
             <div>
-              <p className="max-w-prose text-lg text-paper">{entry.description}</p>
+              <p className="max-w-prose text-lg text-paper">
+                {entry.description}
+              </p>
               <SourcesPopover sources={entry.sources} />
             </div>
             {image ? (
-              <div className={`w-full md:w-56 ${TREATMENT[visual.imageTreatment]}`}>
+              <div
+                className={`w-full md:w-56 ${TREATMENT[visual.imageTreatment]}`}
+              >
                 <TributeImage
                   asset={image}
                   aspectRatio="4 / 3"
@@ -326,14 +427,31 @@ function Gallery({ entry, visual }: { entry: Entry; visual: Preset }) {
   return (
     <article id={entry.id}>
       <Reveal variant="rise">
-        <p className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-4xl md:text-6xl`}>{yearOf(entry)}</p>
-        <h3 className={`mt-4 text-bone text-3xl md:text-4xl ${TITLE_FONT[visual.titleFont]}`}>{entry.title}</h3>
-        <p className="mt-4 max-w-prose text-xl text-paper">{entry.description}</p>
+        <p
+          className={`timeline-year ${YEAR_FONT[visual.yearFont]} text-amber text-4xl md:text-6xl`}
+        >
+          {yearOf(entry)}
+        </p>
+        <h3
+          className={`mt-4 text-bone text-3xl md:text-4xl ${TITLE_FONT[visual.titleFont]}`}
+        >
+          {entry.title}
+        </h3>
+        <p className="mt-4 max-w-prose text-xl text-paper">
+          {entry.description}
+        </p>
       </Reveal>
-      <div className={`mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 ${TREATMENT[visual.imageTreatment]}`}>
+      <div
+        className={`mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 ${TREATMENT[visual.imageTreatment]}`}
+      >
         {entry.images.map((image, i) => (
           <Reveal key={image.src + i} variant="scale" delay={i * 80}>
-            <TributeImage asset={image} aspectRatio="4 / 3" sizes="(max-width: 768px) 100vw, 33vw" fallbackLabel={entry.title} />
+            <TributeImage
+              asset={image}
+              aspectRatio="4 / 3"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              fallbackLabel={entry.title}
+            />
           </Reveal>
         ))}
       </div>

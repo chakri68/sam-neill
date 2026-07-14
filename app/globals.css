@@ -384,8 +384,12 @@ body {
 }
 .ti-lightbox__stage {
   position: relative;
-  width: min(92vw, 1500px);
-  height: min(80vh, 950px);
+  /* Hug the photo: the stage adopts the image's own aspect ratio (declared
+     on the asset, or measured on load), so the contained image fills it
+     edge-to-edge and the border-radius below clips the photo's real corners
+     instead of an invisible letterbox. */
+  aspect-ratio: var(--lightbox-ar, 1.5);
+  width: min(92vw, 1500px, calc(min(80vh, 950px) * var(--lightbox-ar, 1.5)));
 }
 .ti-lightbox__img {
   object-fit: contain;
@@ -457,11 +461,15 @@ body {
   outline: 2px solid var(--color-amber);
   outline-offset: 2px;
 }
+/* Anchored to the widest-possible stage (the min(92vw, 1500px) cap, i.e.
+   min(46vw, 750px) each side of the dialog's centre) rather than the current
+   photo's edge — the stage resizes to each image's aspect ratio, and dialog-
+   relative offsets would make ‹ › jump around while stepping through. */
 .ti-lightbox__nav--prev {
-  left: 0.8rem;
+  left: calc(50% - min(46vw, 750px) + 0.8rem);
 }
 .ti-lightbox__nav--next {
-  right: 0.8rem;
+  right: calc(50% - min(46vw, 750px) + 0.8rem);
 }
 .ti-lightbox__count {
   margin-top: 0.4rem;
@@ -599,6 +607,30 @@ body:has(.ti-lightbox[open]) {
 .site-nav__link.is-active .site-nav__dot {
   opacity: 1;
   transform: scale(1);
+}
+/* Compact mobile nav: brand + all four links must fit a 390px screen in one
+   row — at desktop sizing the row overflows and Gallery lands off-screen. */
+@media (max-width: 767px) {
+  .site-nav {
+    padding: 0.9rem var(--space-page-mobile);
+  }
+  .site-nav__brand {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .site-nav__links {
+    gap: 0.85rem;
+  }
+  .site-nav__link {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    gap: 0.28rem;
+  }
+  .site-nav__dot {
+    width: 4px;
+    height: 4px;
+  }
 }
 @media (min-width: 768px) {
   .site-nav {
@@ -776,7 +808,7 @@ body:has(.ti-lightbox[open]) {
 /* Corner caption/credit for the full-bleed backdrop */
 .film-feature__credit {
   position: absolute;
-  right: var(--space-page-mobile);
+  right: 0;
   bottom: 1.1rem;
   z-index: 10;
   font-family: var(--font-ui);
@@ -787,7 +819,7 @@ body:has(.ti-lightbox[open]) {
 }
 @media (min-width: 1024px) {
   .film-feature__credit {
-    right: var(--space-page-desktop);
+    right: 0;
   }
 }
 .quote-interlude {
@@ -1246,16 +1278,20 @@ body:has(.ti-lightbox[open]) {
   border-color: var(--color-amber);
   box-shadow: 0 0 24px color-mix(in srgb, var(--color-amber) 30%, transparent);
 }
-/* The footprint: quiet bone when idle, amber with a slow breathing glow
-   while music plays — no dancing bars. */
+/* The claw (raptor cutout as a mask, so background-color plays the role
+   fill had on the old svg): quiet bone when idle, amber with a slow
+   breathing glow while music plays — no dancing bars. */
 .audio-toggle__icon {
+  display: block;
   width: 1.35rem;
   height: 1.35rem;
-  fill: color-mix(in srgb, var(--color-bone) 55%, transparent);
-  transition: fill 300ms var(--ease-soft);
+  background-color: color-mix(in srgb, var(--color-bone) 55%, transparent);
+  transition: background-color 300ms var(--ease-soft);
+  -webkit-mask: url("/images/cutouts/claw.webp") center / contain no-repeat;
+  mask: url("/images/cutouts/claw.webp") center / contain no-repeat;
 }
 .audio-toggle.is-playing .audio-toggle__icon {
-  fill: var(--color-amber);
+  background-color: var(--color-amber);
 }
 .audio-toggle.is-playing {
   border-color: color-mix(in srgb, var(--color-amber) 70%, transparent);

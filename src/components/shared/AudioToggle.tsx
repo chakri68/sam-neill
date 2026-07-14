@@ -107,13 +107,9 @@ export function AudioToggle({ tracks, anecdote }: AudioToggleProps) {
         aria-label={playing ? `Pause music — ${current.title}` : `Play music — ${current.title}`}
         title={playing ? "Pause music" : "Play music"}
       >
-        {/* Dinosaur footprint — three toes and a pad. Amber while playing. */}
-        <svg className="audio-toggle__icon" viewBox="0 0 24 24" aria-hidden>
-          <ellipse cx="6.4" cy="7.4" rx="2" ry="2.9" transform="rotate(-24 6.4 7.4)" />
-          <ellipse cx="12" cy="5.4" rx="2" ry="3" />
-          <ellipse cx="17.6" cy="7.4" rx="2" ry="2.9" transform="rotate(24 17.6 7.4)" />
-          <path d="M12 10.2c3.6 0 6 2.3 6 5.2 0 2.6-2.6 4.6-6 4.6s-6-2-6-4.6c0-2.9 2.4-5.2 6-5.2Z" />
-        </svg>
+        {/* Raptor claw cutout, used as a CSS mask so it recolours like the
+            old footprint svg did via fill. Amber while playing. */}
+        <span className="audio-toggle__icon" aria-hidden />
       </button>
     </div>
   );

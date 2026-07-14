@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
+  aspectRatioValue,
   resolveObjectPosition,
   type ImageAsset,
 } from "@/src/content/schemas/image";
@@ -86,6 +87,9 @@ export function TributeImage({
   const [saveData, setSaveData] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [closing, setClosing] = useState(false);
+  // Real shape measured on load — fallback when the asset declares no
+  // aspectRatio, so the lightbox stage can hug the photo either way.
+  const [measuredRatio, setMeasuredRatio] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   useEffect(() => {
@@ -158,6 +162,7 @@ export function TributeImage({
 
   if (bare) return frame;
 
+  const lightboxRatio = measuredRatio ?? aspectRatioValue(asset);
   const lightbox = !onExpand && lightboxOpen ? (
     <dialog
       ref={dialogRef}
@@ -174,7 +179,14 @@ export function TributeImage({
       }}
     >
       <figure className="ti-lightbox__figure">
-        <div className="ti-lightbox__stage">
+        <div
+          className="ti-lightbox__stage"
+          style={
+            lightboxRatio
+              ? ({ "--lightbox-ar": lightboxRatio } as React.CSSProperties)
+              : undefined
+          }
+        >
           <Image
             src={asset.src}
             alt={asset.alt}
@@ -182,6 +194,12 @@ export function TributeImage({
             sizes="92vw"
             quality={78}
             className="ti-lightbox__img"
+            onLoad={(event) => {
+              const img = event.currentTarget;
+              if (img.naturalWidth && img.naturalHeight) {
+                setMeasuredRatio(img.naturalWidth / img.naturalHeight);
+              }
+            }}
           />
         </div>
         <Caption asset={asset} className="ti-lightbox__caption" />

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { TributeImage } from "@/src/components/shared/TributeImage";
 import { Reveal } from "@/src/components/shared/Reveal";
-import type { ImageAsset } from "@/src/content/schemas/image";
+import { aspectRatioValue, type ImageAsset } from "@/src/content/schemas/image";
 
 /** Must match the exit animation duration in globals.css (.ti-lightbox.is-closing). */
 const EXIT_MS = 260;
@@ -18,6 +18,9 @@ export function GalleryGrid({ images }: { images: ImageAsset[] }) {
   const [index, setIndex] = useState<number | null>(null);
   const [direction, setDirection] = useState<0 | 1 | -1>(0);
   const [closing, setClosing] = useState(false);
+  // Real image shapes measured on load, keyed by src — the fallback for
+  // assets that don't declare an aspectRatio, so the stage can hug them too.
+  const [measured, setMeasured] = useState<Record<string, number>>({});
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const open = index !== null;
 
@@ -43,6 +46,9 @@ export function GalleryGrid({ images }: { images: ImageAsset[] }) {
   };
 
   const current = index !== null ? images[index] : null;
+  const stageRatio = current
+    ? (measured[current.src] ?? aspectRatioValue(current))
+    : null;
 
   return (
     <>
@@ -78,7 +84,14 @@ export function GalleryGrid({ images }: { images: ImageAsset[] }) {
           }}
         >
           <figure className="ti-lightbox__figure">
-            <div className="ti-lightbox__stage">
+            <div
+              className="ti-lightbox__stage"
+              style={
+                stageRatio
+                  ? ({ "--lightbox-ar": stageRatio } as React.CSSProperties)
+                  : undefined
+              }
+            >
               {/* keyed remount replays the direction-aware slide per image */}
               <div
                 key={current.src}
@@ -93,6 +106,15 @@ export function GalleryGrid({ images }: { images: ImageAsset[] }) {
                   sizes="92vw"
                   quality={78}
                   className="ti-lightbox__img"
+                  onLoad={(event) => {
+                    const img = event.currentTarget;
+                    if (img.naturalWidth && img.naturalHeight) {
+                      setMeasured((m) => ({
+                        ...m,
+                        [current.src]: img.naturalWidth / img.naturalHeight,
+                      }));
+                    }
+                  }}
                 />
               </div>
             </div>

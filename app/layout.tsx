@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist_Mono, Cormorant_Garamond, Bebas_Neue, Lato } from "next/font/google";
 import "./globals.css";
 import { site } from "@/src/content/loaders/site";
@@ -100,6 +101,16 @@ export default function RootLayout({
           }}
         />
         {children}
+        {/* Cloudflare Web Analytics — production only: from localhost the
+            beacon's pings are CORS-rejected (console noise) and dev visits
+            would pollute the stats anyway. */}
+        {process.env.NODE_ENV === "production" ? (
+          <Script
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            strategy="afterInteractive"
+            data-cf-beacon='{"token": "65d33d3b81514f5f9355a991fb9fccd6"}'
+          />
+        ) : null}
       </body>
     </html>
   );

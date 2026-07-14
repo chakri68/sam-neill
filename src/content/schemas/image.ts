@@ -41,6 +41,18 @@ export const textureAssetSchema = z.object({
 export type TextureAsset = z.infer<typeof textureAssetSchema>;
 
 /**
+ * Numeric value of a "W / H" `aspectRatio` string ("3 / 4" → 0.75), or null
+ * when the asset doesn't declare one.
+ */
+export function aspectRatioValue(
+  asset: Pick<ImageAsset, "aspectRatio">,
+): number | null {
+  if (!asset.aspectRatio) return null;
+  const [w, h] = asset.aspectRatio.split("/").map((part) => Number.parseFloat(part));
+  return w > 0 && h > 0 ? w / h : null;
+}
+
+/**
  * Resolve a `focalPoint` or `objectPosition` into a CSS object-position
  * string. focalPoint wins when both are present; falls back to "center".
  */

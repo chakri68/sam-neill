@@ -95,7 +95,9 @@ export default function Home() {
           dates={site.finalTribute.dates}
         />
 
-        <footer className="px-[var(--space-page-mobile)] py-4 text-center font-ui text-xs text-muted sm:px-[var(--space-page-tablet)] absolute bottom-0 left-0 right-0">
+        {/* pb-20 on mobile keeps the copy clear of the fixed audio toggle
+            parked in the bottom-right corner. */}
+        <footer className="px-[var(--space-page-mobile)] pt-4 pb-20 text-center font-ui text-xs text-muted sm:px-[var(--space-page-tablet)] sm:pb-4 absolute bottom-0 left-0 right-0">
           {site.footer.copy}
           {site.footer.github ? (
             <>
