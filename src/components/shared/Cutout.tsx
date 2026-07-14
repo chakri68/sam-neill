@@ -8,6 +8,8 @@
  * memorial moments entirely at the call sites.
  */
 
+import { withBasePath } from "@/src/lib/site-url";
+
 const CUTOUTS = [
   "alan-1",
   "alan-2",
@@ -65,7 +67,7 @@ export function Cutout({ seed, file, gate, size = 56, className }: CutoutProps) 
   return (
     // eslint-disable-next-line @next/next/no-img-element -- tiny decorative webp, no optimizer needed
     <img
-      src={`/images/cutouts/${name}.webp`}
+      src={withBasePath(`/images/cutouts/${name}.webp`)}
       alt=""
       aria-hidden
       loading="lazy"

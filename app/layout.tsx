@@ -4,7 +4,7 @@ import "./globals.css";
 import { site } from "@/src/content/loaders/site";
 import { theme } from "@/src/content/loaders/theme";
 import { getImage } from "@/src/content/loaders/assets";
-import { siteUrl } from "@/src/lib/site-url";
+import { siteOrigin, siteUrl, withBasePath } from "@/src/lib/site-url";
 
 // UI face for nav, eyebrows, captions, and labels — quietly formal, and
 // clearly distinct from both the display and editorial voices.
@@ -40,14 +40,17 @@ const cormorant = Cormorant_Garamond({
 const ogImage = getImage(site.social.ogImage);
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  // Origin only: ogImage.src arrives already base-path-prefixed (the image
+  // schema does it), so resolving against the full siteUrl would double the
+  // path. Canonical and og:url are absolute for the same reason.
+  metadataBase: new URL(siteOrigin),
   title: site.title,
   description: site.social.description,
-  alternates: { canonical: "/" },
+  alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
     siteName: site.nav.brand,
-    url: "/",
+    url: siteUrl,
     title: site.title,
     description: site.social.description,
     images: ogImage.src
@@ -71,6 +74,19 @@ export const viewport: Viewport = {
   themeColor: theme.colours.charcoal,
 };
 
+// Tribeca (display face) is declared here rather than globals.css because CSS
+// url()s never get the deploy base path prefixed — this is the one absolute
+// asset path Next can't rewrite. Free for personal use only; see
+// /public/fonts/README.md. Missing files still just fall back to Bebas.
+const tribecaFontFace = `@font-face {
+  font-family: "Tribeca";
+  src:
+    url("${withBasePath("/fonts/tribeca.woff2")}") format("woff2"),
+    url("${withBasePath("/fonts/tribeca.woff")}") format("woff"),
+    url("${withBasePath("/fonts/Tribeca.ttf")}") format("truetype");
+  font-display: swap;
+}`;
+
 // Structured data for search engines, built from the same content JSON as the
 // page so it can't drift from the visible copy.
 const jsonLd = {
@@ -93,6 +109,7 @@ export default function RootLayout({
       className={`${lato.variable} ${geistMono.variable} ${cormorant.variable} ${bebas.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <style dangerouslySetInnerHTML={{ __html: tribecaFontFace }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,13 +1,18 @@
 import { z } from "zod";
+import { withBasePath } from "@/src/lib/site-url";
 
 /**
  * The universal image contract. Every image on the site — hero, timeline,
  * posters, textures — is described by this shape so no component ever
  * imports a specific file. `alt` defaults to "" (decorative); meaningful
  * images should supply their own.
+ *
+ * `src` is base-path-prefixed at parse time: content JSON stays root-relative
+ * ("/images/…") while every validated asset is deployable as-is, even when
+ * the site is served from a sub-path (GitHub project pages).
  */
 export const imageAssetSchema = z.object({
-  src: z.string().min(1),
+  src: z.string().min(1).transform(withBasePath),
   alt: z.string().default(""),
   width: z.number().positive().optional(),
   height: z.number().positive().optional(),
@@ -33,7 +38,7 @@ export type ImageAsset = z.infer<typeof imageAssetSchema>;
 
 /** A decorative texture: an image plus the opacity it should render at. */
 export const textureAssetSchema = z.object({
-  src: z.string().min(1),
+  src: z.string().min(1).transform(withBasePath),
   opacity: z.number().min(0).max(1).default(0.06),
   alt: z.string().default(""),
 });

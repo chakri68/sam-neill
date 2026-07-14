@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { imageAssetSchema } from "./image";
+import { withBasePath } from "@/src/lib/site-url";
 
 export const TIMELINE_ENTRY_TYPES = [
   "life",
@@ -50,7 +51,7 @@ export const timelineEntrySchema = z.object({
   images: z.array(imageAssetSchema).default([]),
   // Optional decorative mark (e.g. a film logo) rendered as a small corner
   // badge over the entry. Path into /public; transparent PNG expected.
-  badge: z.string().optional(),
+  badge: z.string().transform(withBasePath).optional(),
   quote: z
     .object({
       text: z.string(),

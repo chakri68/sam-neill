@@ -1,19 +1,8 @@
 @import "tailwindcss";
 
-/* ------------------------------------------------------------------ *
- * Tribeca (display face). Free for personal use; do NOT commit the
- * woff2 or use commercially without a licence. Drop the files at
- * /public/fonts/tribeca.woff2 (+ .woff). Until then this @font-face
- * simply falls back to the stack below — no build error, no crash.
- * ------------------------------------------------------------------ */
-@font-face {
-  font-family: "Tribeca";
-  src:
-    url("/fonts/tribeca.woff2") format("woff2"),
-    url("/fonts/tribeca.woff") format("woff"),
-    url("/fonts/Tribeca.ttf") format("truetype");
-  font-display: swap;
-}
+/* Tribeca (display face) is declared in app/layout.tsx, not here: its file
+ * urls need the deploy base path prefixed, and CSS can't read env vars.
+ * Licensing and drop-in instructions live in /public/fonts/README.md. */
 
 :root {
   /* Fonts — Geist, Cormorant & Bebas come from next/font (variables set in layout) */

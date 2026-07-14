@@ -1,8 +1,9 @@
 import { z } from "zod";
+import { withBasePath } from "@/src/lib/site-url";
 
 /** Background-music playlist. Tracks play in order and loop as a set. */
 export const audioTrackSchema = z.object({
-  src: z.string().min(1),
+  src: z.string().min(1).transform(withBasePath),
   title: z.string(),
 });
 
