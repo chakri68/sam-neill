@@ -10,7 +10,11 @@ import { useScrollProgress } from "@/src/lib/motion/hooks";
  */
 export function TimelineProgress({ children }: { children: ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
-  useScrollProgress(ref, "--progress");
+  // Anchor the draw front at ~62% of the viewport: it stays on screen for the
+  // whole scroll and the line finishes exactly as the timeline's end crosses
+  // that height. The default exit-the-viewport mapping parks the front under
+  // the fixed nav for the entire last quarter of a timeline this tall.
+  useScrollProgress(ref, "--progress", { anchor: 0.62 });
   return (
     <div ref={ref} className="relative">
       {children}

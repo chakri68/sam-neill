@@ -17,14 +17,22 @@ export function usePrefersReducedMotion(): boolean {
 
 /**
  * Scroll progress (0→1) of an element travelling through the viewport.
- * 0 when the element's top hits the bottom of the viewport, 1 when its
- * bottom passes the top. Writes to a CSS var so animation stays off the
- * React render path. Returns the numeric value too for JS consumers.
+ * Default mapping: 0 when the element's top hits the bottom of the viewport,
+ * 1 when its bottom passes the top. Writes to a CSS var so animation stays
+ * off the React render path. Returns the numeric value too for JS consumers.
+ *
+ * With `anchor` (0→1, fraction of viewport height), progress instead tracks
+ * a fixed line in the viewport: 0 when the element's top crosses it, 1 when
+ * the element's bottom does. For very tall elements this keeps the progress
+ * front on screen the whole way — the default mapping parks it near the
+ * viewport top for the entire last stretch, where the fixed nav hides it.
  */
 export function useScrollProgress(
   ref: RefObject<HTMLElement | null>,
   cssVar = "--progress",
+  options?: { anchor?: number },
 ): number {
+  const anchor = options?.anchor;
   const [progress, setProgress] = useState(0);
   const reduced = usePrefersReducedMotion();
 
@@ -42,8 +50,10 @@ export function useScrollProgress(
       frame = 0;
       const rect = node.getBoundingClientRect();
       const vh = window.innerHeight || 1;
-      const total = rect.height + vh;
-      const raw = (vh - rect.top) / total;
+      const raw =
+        anchor != null
+          ? (anchor * vh - rect.top) / Math.max(1, rect.height)
+          : (vh - rect.top) / (rect.height + vh);
       const clamped = Math.min(1, Math.max(0, raw));
       node.style.setProperty(cssVar, clamped.toFixed(4));
       setProgress(clamped);
@@ -60,7 +70,7 @@ export function useScrollProgress(
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
-  }, [ref, cssVar, reduced]);
+  }, [ref, cssVar, reduced, anchor]);
 
   return progress;
 }

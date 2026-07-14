@@ -676,11 +676,12 @@ body:has(.ti-lightbox[open]) {
   pointer-events: none;
   z-index: 0;
   /* Soft tip: the drawn end fades out instead of stopping dead. Tracks the
-     same --progress that drives the stroke draw. */
+     same --progress that drives the stroke draw. Fixed px so the fade stays
+     a tip — a % here scales with the whole timeline (5% ≈ 850px of fade). */
   mask-image: linear-gradient(
     to bottom,
     black 0%,
-    black max(0%, calc(var(--progress, 0) * 100% - 5%)),
+    black max(0%, calc(var(--progress, 0) * 100% - 140px)),
     transparent calc(var(--progress, 0) * 100%)
   );
 }

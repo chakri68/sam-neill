@@ -13,6 +13,13 @@ export interface AudioToggleProps {
 /** How long the anecdote card stays up after playback starts. */
 const HINT_MS = 7000;
 
+/** Steady-state playback volume — background music, not a concert. */
+const BASE_VOLUME = 0.3;
+/** Fade window at the end of a track, seconds. */
+const FADE_OUT_S = 2.5;
+/** Ramp-in length when a track starts, ms. */
+const FADE_IN_MS = 1500;
+
 /**
  * Floating background-music control. No autoplay — browsers block unmuted
  * autoplay anyway, and a memorial shouldn't start singing uninvited. One tap
@@ -24,17 +31,55 @@ const HINT_MS = 7000;
 export function AudioToggle({ tracks, anecdote }: AudioToggleProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hintTimer = useRef<number | null>(null);
+  const fadeFrame = useRef<number | null>(null);
+  const fadingOut = useRef(false);
   const [playing, setPlaying] = useState(false);
   const [index, setIndex] = useState(0);
   const [hint, setHint] = useState(false);
 
   const current = tracks[index];
 
-  // A track change while playing (advance-on-end) starts the new source.
+  // Ramp el.volume toward a target over `ms` on rAF — volume isn't a CSS
+  // property, so no transition can do this. A new fade cancels the previous
+  // one; `done` fires only when the target is actually reached.
+  const fadeTo = (target: number, ms: number, done?: () => void) => {
+    const el = audioRef.current;
+    if (!el) return;
+    if (fadeFrame.current) cancelAnimationFrame(fadeFrame.current);
+    const from = el.volume;
+    const start = performance.now();
+    const step = (now: number) => {
+      const k = Math.min(1, (now - start) / ms);
+      el.volume = from + (target - from) * k;
+      if (k < 1) {
+        fadeFrame.current = requestAnimationFrame(step);
+      } else {
+        fadeFrame.current = null;
+        done?.();
+      }
+    };
+    fadeFrame.current = requestAnimationFrame(step);
+  };
+
+  // A track change while playing (advance-on-end) starts the new source,
+  // fading it in from silence — the previous one faded out via onTimeUpdate.
   useEffect(() => {
     if (!playing) return;
-    audioRef.current?.play().catch(() => setPlaying(false));
+    const el = audioRef.current;
+    if (!el) return;
+    fadingOut.current = false;
+    el.volume = 0;
+    el.play()
+      .then(() => fadeTo(BASE_VOLUME, FADE_IN_MS))
+      .catch(() => setPlaying(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, playing]);
+
+  useEffect(() => {
+    return () => {
+      if (fadeFrame.current) cancelAnimationFrame(fadeFrame.current);
+    };
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -54,14 +99,17 @@ export function AudioToggle({ tracks, anecdote }: AudioToggleProps) {
     const el = audioRef.current;
     if (!el) return;
     if (playing) {
-      el.pause();
+      // Quick fade so the pause doesn't clip mid-note.
       setPlaying(false);
+      fadeTo(0, 350, () => el.pause());
       return;
     }
     try {
-      el.volume = 0.3;
+      fadingOut.current = false;
+      el.volume = 0;
       await el.play();
       setPlaying(true);
+      fadeTo(BASE_VOLUME, FADE_IN_MS);
       showHint();
     } catch {
       // Playback rejected (autoplay policy edge) — stay paused, button remains.
@@ -75,6 +123,17 @@ export function AudioToggle({ tracks, anecdote }: AudioToggleProps) {
         src={current.src}
         preload="none"
         onEnded={() => setIndex((i) => (i + 1) % tracks.length)}
+        onTimeUpdate={(event) => {
+          // Ease the ending track down over its last seconds; the next one
+          // fades in from silence, so switches never cut hard.
+          const el = event.currentTarget;
+          if (!playing || fadingOut.current || !Number.isFinite(el.duration)) return;
+          const remaining = el.duration - el.currentTime;
+          if (remaining <= FADE_OUT_S) {
+            fadingOut.current = true;
+            fadeTo(0, Math.max(200, remaining * 1000));
+          }
+        }}
       />
 
       <div className={`audio-anecdote ${hint ? "is-open" : ""}`} role="note">
