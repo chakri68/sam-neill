@@ -17,7 +17,12 @@ export interface QuotesSectionProps {
  * The sticker wall behind the card — seeds vary the tilt and flip; entries
  * with a `file` are guaranteed casting (mostly Alan, as is right and proper).
  */
-const STICKERS: { seed: string; className: string; size: number; file?: string }[] = [
+const STICKERS: {
+  seed: string;
+  className: string;
+  size: number;
+  file?: string;
+}[] = [
   { seed: "sticker-a", className: "left-[4%] top-[12%]", size: 90 },
   { seed: "sticker-b", className: "right-[6%] top-[18%]", size: 110 },
   { seed: "sticker-c", className: "left-[10%] bottom-[14%]", size: 120 },
@@ -26,12 +31,42 @@ const STICKERS: { seed: string; className: string; size: number; file?: string }
   { seed: "sticker-f", className: "right-[28%] top-[6%]", size: 64 },
   { seed: "sticker-g", className: "left-[2%] top-[48%]", size: 76 },
   { seed: "sticker-h", className: "right-[2%] top-[52%]", size: 96 },
-  { seed: "alan-a", file: "alan-2", className: "left-[16%] top-[26%]", size: 88 },
-  { seed: "alan-b", file: "alan-5", className: "right-[18%] top-[34%]", size: 80 },
-  { seed: "alan-c", file: "alan-3", className: "left-[30%] bottom-[6%]", size: 92 },
-  { seed: "alan-d", file: "alan-6", className: "right-[30%] bottom-[8%]", size: 78 },
-  { seed: "alan-e", file: "alan-7", className: "left-[44%] top-[8%]", size: 64 },
-  { seed: "alan-f", file: "trike-alan", className: "right-[42%] bottom-[3%]", size: 110 },
+  {
+    seed: "alan-a",
+    file: "alan-2",
+    className: "left-[16%] top-[26%]",
+    size: 88,
+  },
+  {
+    seed: "alan-b",
+    file: "alan-5",
+    className: "right-[18%] top-[34%]",
+    size: 80,
+  },
+  {
+    seed: "alan-c",
+    file: "alan-3",
+    className: "left-[30%] bottom-[6%]",
+    size: 92,
+  },
+  {
+    seed: "alan-d",
+    file: "alan-6",
+    className: "right-[30%] bottom-[8%]",
+    size: 78,
+  },
+  {
+    seed: "alan-e",
+    file: "alan-7",
+    className: "left-[44%] top-[8%]",
+    size: 64,
+  },
+  {
+    seed: "alan-f",
+    file: "trike-alan",
+    className: "right-[42%] bottom-[3%]",
+    size: 110,
+  },
 ];
 
 /**
@@ -40,7 +75,13 @@ const STICKERS: { seed: string; className: string; size: number; file?: string }
  * never the current one twice. The toy cutouts live here now, as low-opacity
  * stickers scattered behind the card.
  */
-export function QuotesSection({ id, eyebrow, title, description, quotes }: QuotesSectionProps) {
+export function QuotesSection({
+  id,
+  eyebrow,
+  title,
+  description,
+  quotes,
+}: QuotesSectionProps) {
   const [index, setIndex] = useState(0);
 
   if (!quotes.length) return null;
@@ -73,46 +114,56 @@ export function QuotesSection({ id, eyebrow, title, description, quotes }: Quote
 
       <Reveal variant="rise" className="relative z-10 mb-12 text-center">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h2 className="font-display mt-3 text-bone text-4xl md:text-6xl">{title}</h2>
+        <h2 className="font-display mt-3 text-bone text-4xl md:text-6xl">
+          {title}
+        </h2>
         {description ? (
-          <p className="mx-auto mt-4 max-w-xl text-xl italic text-muted">{description}</p>
+          <p className="mx-auto mt-4 max-w-xl text-xl italic text-muted">
+            {description}
+          </p>
         ) : null}
       </Reveal>
 
-      <div className="relative z-10 flex w-full max-w-3xl flex-col items-center gap-10">
+      <div className="relative z-10 flex w-full max-w-3xl flex-col items-center gap-10 quote-card__container">
         {/* keyed remount replays the entrance animation per quote */}
         <blockquote key={quote.id} className="quote-card">
           {/* auto margins centre short quotes; long ones scroll from the top */}
           <div className="quote-card__body">
-          {quote.kind === "dialogue" ? (
-            <div className="quote-card__lines">
-              {quote.lines.map((line, i) =>
-                line.direction ? (
-                  <p key={i} className="quote-card__direction">
-                    [{line.text}]
-                  </p>
-                ) : (
-                  <p key={i} className="quote-card__line">
-                    {line.speaker ? <span className="quote-card__speaker">{line.speaker}</span> : null}
-                    {line.text}
-                  </p>
-                ),
-              )}
-            </div>
-          ) : (
-            <>
-              {quote.context ? <p className="quote-card__context">{quote.context}</p> : null}
-              <p className="quote-card__text">&ldquo;{quote.text}&rdquo;</p>
-            </>
-          )}
-          <footer className="quote-card__source">
-            {quote.character ? <span>{quote.character} · </span> : null}
-            {quote.source}
-          </footer>
+            {quote.kind === "dialogue" ? (
+              <div className="quote-card__lines">
+                {quote.lines.map((line, i) =>
+                  line.direction ? (
+                    <p key={i} className="quote-card__direction">
+                      [{line.text}]
+                    </p>
+                  ) : (
+                    <p key={i} className="quote-card__line">
+                      {line.speaker ? (
+                        <span className="quote-card__speaker">
+                          {line.speaker}
+                        </span>
+                      ) : null}
+                      {line.text}
+                    </p>
+                  ),
+                )}
+              </div>
+            ) : (
+              <>
+                {quote.context ? (
+                  <p className="quote-card__context">{quote.context}</p>
+                ) : null}
+                <p className="quote-card__text">&ldquo;{quote.text}&rdquo;</p>
+              </>
+            )}
+            <footer className="quote-card__source">
+              {quote.character ? <span>{quote.character} · </span> : null}
+              {quote.source}
+            </footer>
           </div>
         </blockquote>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-5 justify-center">
           <button type="button" className="enter-cta" onClick={reroll}>
             Another one
             <span aria-hidden>→</span>

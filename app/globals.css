@@ -1304,7 +1304,19 @@ body:has(.ti-lightbox[open]) {
   opacity: 0.5;
   filter: saturate(0.7) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
 }
+.quote-card__container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
 .quote-card {
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+  /* Fixed height: the card claims all the room the section can spare, so the
+     button below never shifts. Long quotes scroll inside. */
+  height: min(48vh, 26rem);
+}
+.quote-card__body {
   width: 100%;
   padding: 2.2rem 2.4rem 2rem;
   border-radius: var(--radius-popup);
@@ -1313,9 +1325,6 @@ body:has(.ti-lightbox[open]) {
   backdrop-filter: blur(8px);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
   animation: quote-in 480ms var(--ease-cinematic);
-  /* Fixed height: the card claims all the room the section can spare, so the
-     button below never shifts. Long quotes scroll inside. */
-  height: min(48vh, 26rem);
   overflow-y: auto;
   overscroll-behavior: contain;
   display: flex;
