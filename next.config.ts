@@ -6,10 +6,12 @@ const nextConfig: NextConfig = {
     viewTransition: true,
   },
   images: {
-    // Local images under /public work out of the box. When sourcing photos
-    // from remote hosts, allow them explicitly here, e.g.:
-    // remotePatterns: [{ protocol: "https", hostname: "upload.wikimedia.org" }],
-    remotePatterns: [],
+    // Next 16 restricts optimization to these quality levels; TributeImage
+    // uses 78 (normal) and 45 (reduced-data), so both must be listed.
+    qualities: [45, 75, 78],
+    // Local images under /public work out of the box. Remote hosts must be
+    // allowed explicitly — i.ytimg.com serves the YouTube video posters.
+    remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com" }],
   },
 };
 

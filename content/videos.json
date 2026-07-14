@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "intro": {
+    "eyebrow": "From the archive",
+    "title": "Watch him again",
+    "description": "A few minutes of Sam, as he was."
+  },
+  "videos": [
+    {
+      "id": "video-1",
+      "title": "Paste a YouTube link for this card",
+      "note": "content/videos.json — the \"youtube\" field takes a full URL or a video id",
+      "youtube": ""
+    },
+    {
+      "id": "video-2",
+      "title": "Paste a YouTube link for this card",
+      "note": "Cards render in this order — add or remove entries freely",
+      "youtube": ""
+    },
+    {
+      "id": "video-3",
+      "title": "Paste a YouTube link for this card",
+      "note": "Titles and notes are yours to edit",
+      "youtube": ""
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Everything you'll fill is data:
+- content/timeline.json — add/reorder/hide entries; each picks a layout and animation.preset
+- content/assets.json — registry images (hero, og, textures)
+- content/site.json — all copy + feature flags
+- content/presets.json — tune the visual recipes if you want
+- Drop real photos in public/images/...; if any come from remote URLs, add the host to remotePatterns in next.config.ts

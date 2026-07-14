@@ -15,6 +15,14 @@ export const imageAssetSchema = z.object({
     .object({ x: z.number().min(0).max(1), y: z.number().min(0).max(1) })
     .optional(),
   objectPosition: z.string().optional(),
+  /**
+   * CSS aspect-ratio for this image's frame, e.g. "3 / 4". Overrides the
+   * layout's default frame so portrait sources aren't cropped into landscape.
+   */
+  aspectRatio: z
+    .string()
+    .regex(/^\d+(\.\d+)?\s*\/\s*\d+(\.\d+)?$/)
+    .optional(),
   caption: z.string().optional(),
   credit: z.string().optional(),
   creditUrl: z.string().optional(),

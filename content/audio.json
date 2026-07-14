@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "tracks": [
+    {
+      "src": "/audio/i-will-remember-you.mp3",
+      "title": "I Will Remember You — Sarah McLachlan"
+    },
+    {
+      "src": "/audio/i-will-remember-you-instrumental.mp3",
+      "title": "I Will Remember You — instrumental"
+    },
+    {
+      "src": "/audio/jurassic-theme-piano.mp3",
+      "title": "Jurassic Park theme — piano"
+    }
+  ],
+  "anecdote": {
+    "question": "What song would you like played at your funeral?",
+    "answer": "I Will Remember You, by Sarah McLachlan. That’ll choke the bastards up if nothing else will.",
+    "attribution": "Sam Neill",
+    "sourceLabel": "The Guardian, 2016",
+    "sourceUrl": "https://www.theguardian.com/global/2016/jun/04/sam-neil-actor-interview"
+  }
+}

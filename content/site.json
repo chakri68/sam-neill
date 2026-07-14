@@ -12,8 +12,8 @@
     "brand": "Sam Neill",
     "links": [
       { "label": "Timeline", "target": "timeline" },
-      { "label": "Memories", "target": "memory-machine" },
-      { "label": "Watch", "target": "movie-suggestor" }
+      { "label": "Watch", "target": "watch" },
+      { "label": "Gallery", "target": "gallery" }
     ],
     "menuLabel": "Menu"
   },
@@ -27,7 +27,7 @@
   },
   "timelineEnding": {
     "text": ["Every role became", "someone's memory."],
-    "cta": "Enter the Memory Machine"
+    "signoff": "RIP, dinosaur man. \nThanks for all the memories. You'll always be in our hearts."
   },
   "finalTribute": {
     "lines": ["Actors leave.", "Stories don't.", "Memories certainly don't."],
@@ -48,7 +48,7 @@
     "memorySearch": false,
     "memoryStatistics": false,
     "constellations": false,
-    "audio": false,
+    "audio": true,
     "easterEggs": true
   }
 }

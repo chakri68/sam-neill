@@ -1,0 +1,123 @@
+# Images needed for the Sam Neill tribute
+#
+# Add a path (or URL) after each "PATH:" and I'll wire it into the content JSON.
+# - Local files: drop them under /public/... and put the public path, e.g. /images/timeline/foo.jpg
+# - Remote URLs also fine (I'll add the host to next.config remotePatterns).
+# - Leave PATH blank to keep the current placeholder path (the file just won't exist yet).
+#
+# The [key] is how I map it back — don't change it. Aspect hint = what shape reads best.
+#
+# ============================================================
+# TIMELINE  (content/timeline.json)
+# ============================================================
+#
+# --- Standard entries (landscape ~3:2) -----------------------
+
+[born-1947]            portrait/landscape — young Sam Neill, earliest photo you can find (childhood/family)
+PATH:
+
+[new-zealand-1954]     landscape — Christchurch / New Zealand landscape (place, not necessarily him)
+PATH:
+
+[national-film-unit-1971]  landscape — behind-the-camera / film-camera or documentary-era Neill (early 1970s)
+PATH:
+
+[sleeping-dogs-1977]   landscape — Neill as "Smith" in Sleeping Dogs (1977)
+PATH:
+
+[my-brilliant-career-1979]  landscape — Neill as Harry Beecham, My Brilliant Career (1979)
+PATH:
+
+[reilly-1983]          landscape — Neill as Sidney Reilly, Reilly: Ace of Spies (1983)
+PATH:
+
+[vineyard-two-paddocks-1993]  landscape — Two Paddocks vineyard rows, Central Otago
+PATH:
+
+[the-piano-1993]       landscape — Neill as Alisdair Stewart, The Piano (1993)
+PATH:
+
+[cinema-of-unease-1995]  landscape — Neill in/around Cinema of Unease documentary (1995)
+PATH:
+
+[event-horizon-1997]   landscape — Neill as Dr. William Weir, Event Horizon (1997)
+PATH:
+
+[merlin-1998]          landscape — Neill in the title role, Merlin miniseries (1998)
+PATH:
+
+[jurassic-park-iii-2001]  landscape — Neill as Alan Grant, Jurassic Park III (2001)
+PATH:
+
+[peaky-blinders-2013]  landscape — Neill as Insp. Chester Campbell, Peaky Blinders (2013–14)
+PATH:
+
+[longford-lyell-2019]  landscape — Neill accepting the Longford Lyell Award (AACTA, 2019)
+PATH:
+
+[screen-legend-2025]   landscape — Neill receiving the 2025 NZ Screen Legend award
+PATH:
+
+[cancer-free-2026]     landscape — Neill in 2026 (recent, warm portrait)
+PATH:
+
+[memoir-2023]          book cover — "Did I Ever Tell You This?" memoir cover (2023)
+PATH:
+
+# --- Split-image entry (two portraits, ~3:4 each) ------------
+
+[australian-cinema-1988-1989 .1]  portrait — Neill as Michael Chamberlain, A Cry in the Dark (1988)
+PATH:
+
+[australian-cinema-1988-1989 .2]  portrait — Neill as John Ingram, Dead Calm (1989)
+PATH:
+
+# --- Minimal entries (small landscape ~4:3, honours) ---------
+
+[obe-1991]             small landscape — Neill at a formal event / OBE era (1991)
+PATH:
+
+[dcnzm-2007]           small landscape — Neill at a NZ honours ceremony (2007)
+PATH:
+
+[knighthood-2022]      small landscape — Sir Sam Neill around his knighthood (2022)
+PATH:
+
+# --- Full-screen film features (landscape, HIGH-RES, cinematic) ---
+# These go edge-to-edge as full-bleed backgrounds — pick the biggest, sharpest you can.
+
+[jurassic-park-1993]   full-bleed landscape — Neill as Dr. Alan Grant, Jurassic Park (1993). FEATURED
+PATH:
+
+[hunt-for-the-wilderpeople-2016]  full-bleed landscape — Neill as Uncle Hec in the NZ bush (2016). FEATURED
+PATH:
+
+[jurassic-world-dominion-2022]  full-bleed landscape — Neill/Dern/Goldblum reunion, Dominion (2022). FEATURED
+PATH:
+
+[farewell-2026]        full-bleed PORTRAIT-friendly — a dignified portrait of Sam Neill (1947–2026). FEATURED
+PATH:
+
+# ============================================================
+# SITE ASSETS  (content/assets.json)
+# ============================================================
+
+[heroPortrait]         portrait — the landing hero. Best single portrait of Sam Neill (crops to center 25%)
+PATH:
+
+[socialPreview]        1200x630 — Open Graph share image (portrait + title). Optional; can generate later
+PATH:
+
+# ============================================================
+# PHASE 2 / OPTIONAL — not rendered yet, skip unless you want to source early
+# ============================================================
+
+[finalTributePortrait]  portrait — a warm, smiling Sam Neill for the closing tribute
+PATH:
+
+[memoryBackground]     dark starfield / night-sky background for the Memory Machine (Phase 2)
+PATH:
+
+# Decorative textures (film grain, paper, projector dust, projector texture):
+# these are subtle overlays — I can source/generate CC0 ones if you'd rather not hunt them down.
+# [textures.filmGrain] [textures.paper] [textures.projectorDust] [moviePopupTexture]

@@ -6,7 +6,9 @@ export const TIMELINE_ENTRY_TYPES = [
   "career",
   "film",
   "television",
+  "documentary",
   "award",
+  "honour",
   "personal",
   "tribute",
 ] as const;
@@ -15,7 +17,9 @@ export const TIMELINE_LAYOUTS = [
   "image-left",
   "image-right",
   "full-image",
+  "split-image",
   "text-only",
+  "minimal",
   "gallery",
   "quote",
 ] as const;
@@ -38,8 +42,13 @@ export const timelineEntrySchema = z.object({
   subtitle: z.string().optional(),
   description: z.string().default(""),
   longDescription: z.string().optional(),
-  layout: z.enum(TIMELINE_LAYOUTS).catch("text-only").default("text-only"),
+  // Absent → undefined (so a preset can supply the layout); invalid → safe
+  // fallback; valid → itself. Order matters: optional() before catch().
+  layout: z.enum(TIMELINE_LAYOUTS).optional().catch("text-only"),
   images: z.array(imageAssetSchema).default([]),
+  // Optional decorative mark (e.g. a film logo) rendered as a small corner
+  // badge over the entry. Path into /public; transparent PNG expected.
+  badge: z.string().optional(),
   quote: z
     .object({
       text: z.string(),

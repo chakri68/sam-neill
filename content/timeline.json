@@ -1,126 +1,900 @@
 {
   "version": 1,
   "title": "The Life of Sam Neill",
+  "research": {
+    "lastVerified": "2026-07-14",
+    "dateConvention": "Exact dates are used where a reliable source provides one. Entries known only to a year use January 1 as a sortable placeholder and set datePrecision to year.",
+    "editorialNote": "Descriptions are concise editorial summaries based on the attached sources. Image paths are replaceable local placeholders; source links do not grant image-reuse rights."
+  },
   "intro": {
     "eyebrow": "A life in stories",
     "title": "Sam Neill",
-    "description": "An exploration of the life, work, and characters that became part of our memories."
+    "description": "A journey through the life, work, and characters of a New Zealand screen legend whose stories became part of our own."
   },
   "entries": [
     {
       "id": "born-1947",
       "date": "1947-09-14",
+      "datePrecision": "day",
       "displayDate": "1947",
       "type": "life",
       "title": "A story begins",
       "subtitle": "Omagh, Northern Ireland",
-      "description": "Nigel John Dermot Neill was born before his family moved to New Zealand, the landscape that would shape him.",
+      "description": "Nigel John Dermot Neill was born in Omagh to Priscilla Neill, who was English, and Dermot Neill, a New Zealander serving with the Royal Irish Fusiliers.",
       "layout": "image-right",
       "images": [
         {
           "src": "/images/timeline/early-life.jpg",
           "alt": "An early photograph of Sam Neill",
           "objectPosition": "center",
+          "aspectRatio": "2 / 3",
           "caption": "The early years"
         }
       ],
       "animation": { "preset": "life-default", "intensity": "subtle" },
-      "tags": ["early-life"]
+      "tags": ["early-life", "omagh"],
+      "sources": [
+        {
+          "title": "Sam Neill — Biography",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/profile/sam-neill/"
+        },
+        {
+          "title": "Sam Neill",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/person/sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-1954",
+      "date": "1954-01-01",
+      "datePrecision": "year",
+      "displayDate": "1954",
+      "type": "life",
+      "title": "Home in New Zealand",
+      "subtitle": "Christchurch, New Zealand",
+      "description": "At seven, he moved with his family to Christchurch. New Zealand became the place he called home and the centre of his life away from film sets.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/christchurch.jpg",
+          "alt": "Christchurch and the surrounding New Zealand landscape",
+          "objectPosition": "center",
+          "aspectRatio": "4 / 3",
+          "caption": "Christchurch — home from the age of seven"
+        }
+      ],
+      "animation": { "preset": "life-default", "intensity": "subtle" },
+      "tags": ["early-life", "new-zealand", "christchurch"],
+      "sources": [
+        {
+          "title": "Sam Neill — Biography",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/profile/sam-neill/"
+        },
+        {
+          "title": "Exclusive: Sir Sam Neill talks deserving new knight Sir Ian Mune",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2023/12/31/exclusive-sir-sam-neill-talks-deserving-new-knight-sir-ian-mune/"
+        }
+      ]
+    },
+    {
+      "id": "national-film-unit-1971",
+      "date": "1971-01-01",
+      "datePrecision": "year",
+      "displayDate": "Early 1970s",
+      "type": "career",
+      "title": "Learning the language of film",
+      "subtitle": "New Zealand National Film Unit",
+      "description": "Before international fame, Neill worked behind the camera at the National Film Unit, writing, editing, and directing documentaries. He was learning how films were built while finding his way as an actor.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/national-film-unit.jpg",
+          "alt": "A film camera representing Sam Neill's documentary work",
+          "caption": "Behind the camera"
+        }
+      ],
+      "animation": { "preset": "career-origin", "intensity": "subtle" },
+      "tags": ["documentary", "director", "new-zealand"],
+      "sources": [
+        {
+          "title": "Sam Neill",
+          "publisher": "New Zealand Film On Demand",
+          "url": "https://ondemand.nzfilm.co.nz/page/sam-neill/"
+        },
+        {
+          "title": "New Country — New People",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/videos/new-country-new-people-1978/"
+        }
+      ]
     },
     {
       "id": "sleeping-dogs-1977",
-      "date": "1977-10-01",
+      "date": "1977-01-01",
+      "datePrecision": "year",
       "displayDate": "1977",
       "type": "film",
       "title": "Sleeping Dogs",
       "subtitle": "Smith",
-      "description": "His breakthrough lead in the first New Zealand film to open in the United States. The career had begun.",
+      "description": "Roger Donaldson cast Neill as the reluctant hero of a political thriller that became a breakthrough for both men and the first New Zealand-made feature released in the United States.",
       "layout": "image-left",
       "images": [
         {
           "src": "/images/timeline/sleeping-dogs.jpg",
-          "alt": "Sam Neill in Sleeping Dogs",
+          "alt": "Sam Neill as Smith in Sleeping Dogs",
+          "caption": "As Smith in Sleeping Dogs (1977)",
           "credit": "Aardvark Films"
         }
       ],
+      "relatedMovies": ["sleeping-dogs"],
       "animation": { "preset": "career-breakthrough", "intensity": "normal" },
-      "tags": ["new-zealand", "breakthrough"]
-    },
-    {
-      "id": "quote-craft",
-      "date": "1985-01-01",
-      "type": "personal",
-      "layout": "quote",
-      "title": "On the work",
-      "description": "A reflection on a life spent inhabiting other people.",
-      "quote": {
-        "text": "I've never really thought of myself as a star. I'm a working actor, and I've been lucky enough to keep working.",
-        "attribution": "Sam Neill"
-      },
-      "animation": { "preset": "quote-interlude", "intensity": "subtle" },
-      "tags": ["reflection"]
-    },
-    {
-      "id": "jurassic-park-1993",
-      "date": "1993-06-11",
-      "displayDate": "1993",
-      "type": "film",
-      "title": "Welcome to Jurassic Park",
-      "subtitle": "Dr. Alan Grant",
-      "description": "Sam Neill introduced a generation to one of cinema's most beloved scientists.",
-      "longDescription": "The role of Dr. Alan Grant became one of the defining performances of his career and inspired countless childhood fascinations with dinosaurs, fossils, and science.",
-      "layout": "full-image",
-      "images": [
+      "tags": ["new-zealand", "breakthrough", "film"],
+      "sources": [
         {
-          "src": "/images/timeline/jurassic-park.jpg",
-          "alt": "Sam Neill portraying Dr. Alan Grant",
-          "focalPoint": { "x": 0.5, "y": 0.3 },
-          "credit": "Universal Pictures"
+          "title": "Feature film — Sleeping Dogs",
+          "publisher": "Te Ara: The Encyclopedia of New Zealand",
+          "url": "https://teara.govt.nz/en/feature-film/print"
+        },
+        {
+          "title": "Film in NZ",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/film-in-nz/"
         }
-      ],
-      "relatedMovies": ["jurassic-park"],
-      "featured": true,
-      "animation": { "preset": "film-feature", "intensity": "cinematic" },
-      "theme": { "background": "deepGreen" },
-      "tags": ["jurassic-park", "alan-grant", "film"]
+      ]
     },
     {
-      "id": "the-piano-1993",
-      "date": "1993-05-15",
-      "displayDate": "1993",
+      "id": "my-brilliant-career-1979",
+      "date": "1979-01-01",
+      "datePrecision": "year",
+      "displayDate": "1979",
       "type": "film",
-      "title": "The Piano",
-      "subtitle": "Alisdair Stewart",
-      "description": "A very different 1993 — Jane Campion's Palme d'Or winner showed the range beneath the adventure roles.",
+      "title": "My Brilliant Career",
+      "subtitle": "Harry Beecham",
+      "description": "As Harry Beecham opposite Judy Davis, Neill found an international audience in Gillian Armstrong's landmark Australian film.",
       "layout": "image-right",
       "images": [
         {
-          "src": "/images/timeline/the-piano.jpg",
-          "alt": "Sam Neill in The Piano",
-          "credit": "Miramax"
+          "src": "/images/timeline/my-brilliant-career.jpg",
+          "alt": "Sam Neill as Harry Beecham in My Brilliant Career",
+          "aspectRatio": "16 / 9",
+          "caption": "As Harry Beecham in My Brilliant Career (1979)"
         }
       ],
-      "animation": { "preset": "film-feature", "intensity": "normal" },
-      "tags": ["the-piano", "drama"]
+      "relatedMovies": ["my-brilliant-career"],
+      "animation": { "preset": "career-breakthrough", "intensity": "normal" },
+      "tags": ["australia", "breakthrough", "film"],
+      "sources": [
+        {
+          "title": "Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        },
+        {
+          "title": "Sam Neill",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/person/sam-neill/"
+        }
+      ]
     },
     {
-      "id": "vineyard-two-paddocks",
+      "id": "possession-1981",
+      "date": "1981-01-01",
+      "datePrecision": "year",
+      "displayDate": "1981",
+      "type": "film",
+      "title": "Possession",
+      "subtitle": "Mark",
+      "description": "Andrzej Żuławski's feverish psychological horror asked for one of Neill's most extreme performances. The film grew into a cult landmark and revealed how fearlessly strange his choices could be.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/possession.jpg",
+          "alt": "Sam Neill as Mark in Possession",
+          "caption": "As Mark in Possession (1981)"
+        }
+      ],
+      "relatedMovies": ["possession"],
+      "animation": { "preset": "film-feature", "intensity": "cinematic" },
+      "theme": { "background": "black" },
+      "tags": ["horror", "cult-film", "film"],
+      "sources": [
+        {
+          "title": "Sir Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        }
+      ]
+    },
+    {
+      "id": "reilly-1983",
+      "date": "1983-01-01",
+      "datePrecision": "year",
+      "displayDate": "1983",
+      "type": "television",
+      "title": "Reilly, Ace of Spies",
+      "subtitle": "Sidney Reilly",
+      "description": "Neill led the British miniseries as the elusive intelligence agent Sidney Reilly. The performance earned him the first of his three Golden Globe nominations.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/reilly-ace-of-spies.jpg",
+          "alt": "Sam Neill as Sidney Reilly in Reilly, Ace of Spies",
+          "aspectRatio": "16 / 9",
+          "caption": "As Sidney Reilly in Reilly, Ace of Spies (1983)"
+        }
+      ],
+      "animation": { "preset": "career-milestone", "intensity": "normal" },
+      "tags": ["television", "spy", "golden-globes"],
+      "sources": [
+        {
+          "title": "Reilly: Ace of Spies",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/tv-show/reilly-ace-of-spies/"
+        },
+        {
+          "title": "Sam Neill",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/person/sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "australian-cinema-1988-1989",
+      "date": "1988-01-01",
+      "datePrecision": "year",
+      "displayDate": "1988–1989",
+      "type": "film",
+      "title": "Two unforgettable Australian dramas",
+      "subtitle": "A Cry in the Dark and Dead Calm",
+      "description": "In consecutive years, Neill played Michael Chamberlain opposite Meryl Streep in A Cry in the Dark and John Ingram opposite Nicole Kidman in Dead Calm — two very different performances that deepened his international reputation.",
+      "layout": "split-image",
+      "images": [
+        {
+          "src": "/images/timeline/a-cry-in-the-dark.jpg",
+          "alt": "Sam Neill as Michael Chamberlain in A Cry in the Dark",
+          "caption": "As Michael Chamberlain in A Cry in the Dark (1988)"
+        },
+        {
+          "src": "/images/timeline/dead-calm.jpg",
+          "alt": "Sam Neill as John Ingram in Dead Calm",
+          "caption": "With Nicole Kidman in Dead Calm (1989)"
+        }
+      ],
+      "relatedMovies": ["a-cry-in-the-dark", "dead-calm"],
+      "animation": { "preset": "film-feature", "intensity": "normal" },
+      "tags": ["australia", "drama", "thriller", "film"],
+      "sources": [
+        {
+          "title": "Sam Neill",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/person/sam-neill/"
+        },
+        {
+          "title": "Sam Neill obituary",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2026/jul/13/sam-neill-obituary"
+        }
+      ]
+    },
+    {
+      "id": "obe-1991",
+      "date": "1991-06-14",
+      "datePrecision": "day",
+      "displayDate": "1991",
+      "type": "honour",
+      "title": "Honoured for acting",
+      "subtitle": "Officer of the Order of the British Empire",
+      "description": "Neill was appointed an OBE for his services as an actor — formal recognition of a career that was still only gathering breadth and momentum.",
+      "layout": "minimal",
+      "images": [
+        {
+          "src": "/images/timeline/obe.jpg",
+          "alt": "Sam Neill at a formal event",
+          "aspectRatio": "3 / 2",
+          "caption": "Appointed OBE for services to acting, 1991"
+        }
+      ],
+      "animation": { "preset": "honour", "intensity": "subtle" },
+      "tags": ["honour", "obe", "acting"],
+      "sources": [
+        {
+          "title": "Sam Neill obituary",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2026/jul/13/sam-neill-obituary"
+        },
+        {
+          "title": "Sam Neill",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/profile/sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "vineyard-two-paddocks-1993",
       "date": "1993-01-01",
-      "displayDate": "1990s",
+      "datePrecision": "year",
+      "displayDate": "1993",
       "type": "personal",
       "title": "Two Paddocks",
-      "subtitle": "Central Otago, New Zealand",
-      "description": "Away from the screen, he planted a vineyard. Pinot noir, olive trees, and a flock of animals he named after co-stars.",
+      "subtitle": "Gibbston, Central Otago",
+      "description": "With modest ambitions, Neill planted five acres of pinot noir at Gibbston. The little vineyard grew into Two Paddocks, an organic family winery rooted across Central Otago.",
       "layout": "image-left",
       "images": [
         {
           "src": "/images/timeline/two-paddocks.jpg",
-          "alt": "Vineyard rows in Central Otago",
-          "objectPosition": "center"
+          "alt": "Vineyard rows at Two Paddocks in Central Otago",
+          "objectPosition": "center",
+          "caption": "Vines, animals, and home"
         }
       ],
       "animation": { "preset": "life-default", "intensity": "subtle" },
-      "tags": ["wine", "new-zealand", "personal"]
+      "tags": ["wine", "new-zealand", "personal", "two-paddocks"],
+      "sources": [
+        {
+          "title": "The Story",
+          "publisher": "Two Paddocks",
+          "url": "https://www.twopaddocks.com/the-story"
+        },
+        {
+          "title": "Sam Neill's Otago",
+          "publisher": "Two Paddocks",
+          "url": "https://www.twopaddocks.com/news-media/sam-neills-otago"
+        }
+      ]
+    },
+    {
+      "id": "the-piano-1993",
+      "date": "1993-05-15",
+      "datePrecision": "day",
+      "displayDate": "1993",
+      "type": "film",
+      "title": "The Piano",
+      "subtitle": "Alisdair Stewart",
+      "description": "Jane Campion's The Piano premiered at Cannes and shared the Palme d'Or. As the controlling frontiersman Alisdair Stewart, Neill gave 1993 a dark counterpoint to the wonder that would follow.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/the-piano.jpg",
+          "alt": "Sam Neill as Alisdair Stewart in The Piano",
+          "aspectRatio": "16 / 9",
+          "caption": "As Alisdair Stewart in The Piano (1993)",
+          "credit": "Jan Chapman Productions"
+        }
+      ],
+      "relatedMovies": ["the-piano"],
+      "animation": { "preset": "film-feature", "intensity": "normal" },
+      "tags": ["the-piano", "drama", "cannes", "film"],
+      "sources": [
+        {
+          "title": "The Piano",
+          "publisher": "Festival de Cannes",
+          "url": "https://www.festival-cannes.com/en/f/the-piano/"
+        },
+        {
+          "title": "Sam Neill",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/person/sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "jurassic-park-1993",
+      "date": "1993-06-11",
+      "datePrecision": "day",
+      "displayDate": "1993",
+      "type": "film",
+      "title": "Welcome to Jurassic Park",
+      "subtitle": "Dr. Alan Grant",
+      "description": "Steven Spielberg's Jurassic Park made Neill's Dr. Alan Grant one of cinema's most beloved scientists — practical, sceptical, brave, and filled with wonder when it mattered.",
+      "longDescription": "For millions of viewers, Alan Grant became inseparable from the first sight of living dinosaurs. Neill gave the spectacle a human centre and inspired generations of childhood fascinations with fossils, fieldwork, and science.",
+      "layout": "full-image",
+      "images": [
+        {
+          "src": "/images/timeline/jurassic-park.jpg",
+          "alt": "Sam Neill portraying Dr. Alan Grant in Jurassic Park",
+          "focalPoint": { "x": 0.5, "y": 0.3 },
+          "caption": "As Dr. Alan Grant in Jurassic Park (1993)",
+          "credit": "Universal Pictures"
+        }
+      ],
+      "badge": "/images/movies/jurassic-park-logo.png",
+      "relatedMovies": ["jurassic-park"],
+      "featured": true,
+      "animation": { "preset": "film-feature", "intensity": "cinematic" },
+      "theme": { "background": "deepGreen" },
+      "tags": ["jurassic-park", "alan-grant", "film", "science"],
+      "sources": [
+        {
+          "title": "Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        },
+        {
+          "title": "Sam Neill obituary",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2026/jul/13/sam-neill-obituary"
+        }
+      ]
+    },
+    {
+      "id": "cinema-of-unease-1995",
+      "date": "1995-01-01",
+      "datePrecision": "year",
+      "displayDate": "1995",
+      "type": "documentary",
+      "title": "Cinema of Unease",
+      "subtitle": "A personal journey through New Zealand film",
+      "description": "Neill returned behind the camera, co-directing with Judy Rymer a personal history of New Zealand cinema. The documentary placed the films of his homeland within the Century of Cinema series and screened at Cannes.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/cinema-of-unease.jpg",
+          "alt": "Sam Neill in Cinema of Unease",
+          "aspectRatio": "4 / 3",
+          "caption": "Cinema of Unease: A Personal Journey (1995)"
+        }
+      ],
+      "animation": { "preset": "career-milestone", "intensity": "subtle" },
+      "tags": ["documentary", "director", "new-zealand-cinema"],
+      "sources": [
+        {
+          "title": "One Network News — 1995 Cannes Film Festival",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/title/one-network-news-cannes-1995"
+        },
+        {
+          "title": "Sam Neill — Biography",
+          "publisher": "NZ On Screen",
+          "url": "https://www.nzonscreen.com/profile/sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "event-horizon-1997",
+      "date": "1997-01-01",
+      "datePrecision": "year",
+      "displayDate": "1997",
+      "type": "film",
+      "title": "Event Horizon",
+      "subtitle": "Dr. William Weir",
+      "description": "As the haunted designer of a vanished spacecraft, Neill helped turn Paul W. S. Anderson's science-fiction horror into an enduring cult favourite.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/event-horizon.jpg",
+          "alt": "Sam Neill as Dr. William Weir in Event Horizon",
+          "aspectRatio": "2 / 1",
+          "caption": "As Dr. William Weir in Event Horizon (1997)"
+        }
+      ],
+      "relatedMovies": ["event-horizon"],
+      "animation": { "preset": "film-feature", "intensity": "cinematic" },
+      "theme": { "background": "spaceBlack" },
+      "tags": ["science-fiction", "horror", "cult-film"],
+      "sources": [
+        {
+          "title": "Sam Neill obituary",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2026/jul/13/sam-neill-obituary"
+        },
+        {
+          "title": "Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        }
+      ]
+    },
+    {
+      "id": "merlin-1998",
+      "date": "1998-01-01",
+      "datePrecision": "year",
+      "displayDate": "1998",
+      "type": "television",
+      "title": "Merlin",
+      "subtitle": "Merlin",
+      "description": "Neill took the title role in the television miniseries Merlin, earning another Golden Globe nomination and bringing gravity, humour, and weariness to the legendary wizard.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/merlin.jpg",
+          "alt": "Sam Neill in the television miniseries Merlin",
+          "aspectRatio": "16 / 9",
+          "caption": "The title role in Merlin (1998)"
+        }
+      ],
+      "animation": { "preset": "career-milestone", "intensity": "normal" },
+      "tags": ["television", "fantasy", "golden-globes"],
+      "sources": [
+        {
+          "title": "Sam Neill",
+          "publisher": "Golden Globes",
+          "url": "https://goldenglobes.com/person/sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "jurassic-park-iii-2001",
+      "date": "2001-01-01",
+      "datePrecision": "year",
+      "displayDate": "2001",
+      "type": "film",
+      "title": "Dr. Grant returns",
+      "subtitle": "Jurassic Park III",
+      "description": "Eight years after Jurassic Park, Neill returned as Alan Grant — older, more wary, and still the person audiences trusted when everything went wrong on an island full of dinosaurs.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/jurassic-park-iii.jpg",
+          "alt": "Sam Neill as Dr. Alan Grant in Jurassic Park III",
+          "caption": "Grant returns in Jurassic Park III (2001)",
+          "credit": "Universal Pictures"
+        }
+      ],
+      "badge": "/images/movies/jurassic-park-logo.png",
+      "relatedMovies": ["jurassic-park-iii"],
+      "animation": { "preset": "film-feature", "intensity": "normal" },
+      "theme": { "background": "deepGreen" },
+      "tags": ["jurassic-park", "alan-grant", "film"],
+      "sources": [
+        {
+          "title": "Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        }
+      ]
+    },
+    {
+      "id": "dcnzm-2007",
+      "date": "2007-01-01",
+      "datePrecision": "year",
+      "displayDate": "2007",
+      "type": "honour",
+      "title": "A New Zealand honour",
+      "subtitle": "Distinguished Companion of the New Zealand Order of Merit",
+      "description": "New Zealand appointed Neill a Distinguished Companion of the New Zealand Order of Merit for services to acting.",
+      "layout": "minimal",
+      "images": [
+        {
+          "src": "/images/timeline/new-zealand-order-of-merit.jpg",
+          "alt": "Sam Neill at a New Zealand honours ceremony",
+          "aspectRatio": "3 / 2",
+          "caption": "Distinguished Companion of the New Zealand Order of Merit, 2007"
+        }
+      ],
+      "animation": { "preset": "honour", "intensity": "subtle" },
+      "tags": ["honour", "new-zealand", "acting"],
+      "sources": [
+        {
+          "title": "New Year Honours 2007",
+          "publisher": "New Zealand Gazette",
+          "url": "https://gazette.govt.nz/notice/id/2007-vr143"
+        }
+      ]
+    },
+    {
+      "id": "peaky-blinders-2013",
+      "date": "2013-01-01",
+      "datePrecision": "year",
+      "displayDate": "2013–2014",
+      "type": "television",
+      "title": "Peaky Blinders",
+      "subtitle": "Chief Inspector Chester Campbell",
+      "description": "As Tommy Shelby's ruthless nemesis, Chief Inspector Chester Campbell, Neill brought menace and damaged conviction to the first two series of Peaky Blinders.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/peaky-blinders.jpg",
+          "alt": "Sam Neill as Chief Inspector Chester Campbell in Peaky Blinders",
+          "aspectRatio": "2 / 1",
+          "caption": "As Chief Inspector Chester Campbell in Peaky Blinders (2013–14)"
+        }
+      ],
+      "animation": { "preset": "television-feature", "intensity": "normal" },
+      "tags": ["television", "peaky-blinders", "drama"],
+      "sources": [
+        {
+          "title": "Peaky Blinders — Series Two Press Pack",
+          "publisher": "BBC",
+          "url": "https://downloads.bbc.co.uk/mediacentre/peaky-blinders-s2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "hunt-for-the-wilderpeople-2016",
+      "date": "2016-01-22",
+      "datePrecision": "day",
+      "displayDate": "2016",
+      "type": "film",
+      "title": "Hunt for the Wilderpeople",
+      "subtitle": "Uncle Hec",
+      "description": "Taika Waititi paired Neill's gruff Uncle Hec with Julian Dennison's Ricky Baker for a funny, tender adventure through the New Zealand bush — and a new generation fell in love with him.",
+      "layout": "full-image",
+      "images": [
+        {
+          "src": "/images/timeline/hunt-for-the-wilderpeople.jpg",
+          "alt": "Sam Neill as Uncle Hec in Hunt for the Wilderpeople",
+          "focalPoint": { "x": 0.5, "y": 0.4 },
+          "caption": "As Uncle Hec in Hunt for the Wilderpeople (2016)"
+        }
+      ],
+      "relatedMovies": ["hunt-for-the-wilderpeople"],
+      "featured": true,
+      "animation": { "preset": "film-feature", "intensity": "cinematic" },
+      "theme": { "background": "forest" },
+      "tags": ["new-zealand", "taika-waititi", "film", "comedy-drama"],
+      "sources": [
+        {
+          "title": "Hunt for the Wilderpeople",
+          "publisher": "New Zealand Film Commission",
+          "url": "https://www.nzfilm.co.nz/films/hunt-wilderpeople"
+        },
+        {
+          "title": "Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        }
+      ]
+    },
+    {
+      "id": "longford-lyell-2019",
+      "date": "2019-12-04",
+      "datePrecision": "day",
+      "displayDate": "2019",
+      "type": "honour",
+      "title": "The Longford Lyell Award",
+      "subtitle": "Australia's highest screen honour",
+      "description": "AACTA presented Neill with the Longford Lyell Award, its highest individual honour, recognising his contribution to Australian screen culture.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/longford-lyell-award.jpg",
+          "alt": "Sam Neill accepting the Longford Lyell Award",
+          "aspectRatio": "16 / 9",
+          "caption": "Accepting the Longford Lyell Award, 2019"
+        }
+      ],
+      "animation": { "preset": "honour", "intensity": "normal" },
+      "tags": ["honour", "aacta", "lifetime-achievement"],
+      "sources": [
+        {
+          "title": "2019 AACTA Awards — Overview",
+          "publisher": "AACTA",
+          "url": "https://www.aacta.org/aacta-awards/winners-and-nominees/2019-aacta-awards/overview/"
+        },
+        {
+          "title": "Sam Neill's Advice for Emerging Actors",
+          "publisher": "AACTA",
+          "url": "https://www.aacta.org/connect/sam-neills-advice-for-emerging-actors/"
+        }
+      ]
+    },
+    {
+      "id": "knighthood-2022",
+      "date": "2022-06-09",
+      "datePrecision": "day",
+      "displayDate": "2022",
+      "type": "honour",
+      "title": "Sir Sam Neill",
+      "subtitle": "Knight Companion of the New Zealand Order of Merit",
+      "description": "His 2007 honour was redesignated as a knighthood. After once feeling that 'Sir' was too grand, he accepted the title in recognition of the profession and the people he had worked beside.",
+      "layout": "minimal",
+      "images": [
+        {
+          "src": "/images/timeline/knighthood.jpg",
+          "alt": "Sir Sam Neill after receiving his knighthood",
+          "aspectRatio": "4 / 5",
+          "caption": "Sir Sam Neill, Knight Companion, 2022"
+        }
+      ],
+      "animation": { "preset": "honour", "intensity": "normal" },
+      "tags": ["honour", "knighthood", "new-zealand"],
+      "sources": [
+        {
+          "title": "Actor Sam Neill accepts new title",
+          "publisher": "Two Paddocks / Scoop Regional",
+          "url": "https://www.twopaddocks.com/news-media/actor-sam-neill-accepts-new-title"
+        },
+        {
+          "title": "Knights and Dames of the New Zealand Order of Merit",
+          "publisher": "New Zealand Department of the Prime Minister and Cabinet",
+          "url": "https://www.dpmc.govt.nz/our-programmes/new-zealand-royal-honours/honours-lists-and-recipients/honours-lists/knights-dames-new-zealand-order-of-merit"
+        }
+      ]
+    },
+    {
+      "id": "jurassic-world-dominion-2022",
+      "date": "2022-06-10",
+      "datePrecision": "day",
+      "displayDate": "2022",
+      "type": "film",
+      "title": "The original trio, together again",
+      "subtitle": "Jurassic World Dominion",
+      "description": "Nearly three decades after Jurassic Park, Neill returned as Alan Grant alongside Laura Dern and Jeff Goldblum. For longtime audiences, the reunion carried an entire childhood back onto the screen.",
+      "layout": "full-image",
+      "images": [
+        {
+          "src": "/images/timeline/jurassic-world-dominion.jpg",
+          "alt": "Sam Neill, Laura Dern, and Jeff Goldblum in Jurassic World Dominion",
+          "caption": "With Laura Dern and Jeff Goldblum, Jurassic World Dominion (2022)",
+          "credit": "Universal Pictures"
+        }
+      ],
+      "badge": "/images/movies/jurassic-park-logo.png",
+      "relatedMovies": ["jurassic-world-dominion"],
+      "featured": true,
+      "animation": { "preset": "film-feature", "intensity": "cinematic" },
+      "theme": { "background": "deepGreen" },
+      "tags": ["jurassic-park", "alan-grant", "reunion", "film"],
+      "sources": [
+        {
+          "title": "Sam Neill's greatest roles: From Sleeping Dogs to Jurassic Park",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/14/sir-sam-neills-greatest-roles-from-sleeping-dogs-to-jurassic-park/"
+        },
+        {
+          "title": "New Zealand actor Sam Neill dies aged 78",
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/new-zealand-actor-sam-neill-has-died-family-says-statement-2026-07-13/"
+        }
+      ]
+    },
+    {
+      "id": "quote-life-2023",
+      "date": "2023-03-17",
+      "datePrecision": "day",
+      "displayDate": "2023",
+      "type": "personal",
+      "layout": "quote",
+      "title": "On life",
+      "description": "Facing illness with the dry candour that had always been his own.",
+      "quote": {
+        "text": "I'm not afraid to die, but it would annoy me.",
+        "attribution": "Sam Neill"
+      },
+      "animation": { "preset": "quote-interlude", "intensity": "subtle" },
+      "tags": ["reflection", "memoir"],
+      "sources": [
+        {
+          "title": "Sam Neill on his new memoir and living with blood cancer",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2023/mar/17/sam-neill-cancer-memoir-interview"
+        }
+      ]
+    },
+    {
+      "id": "memoir-2023",
+      "date": "2023-03-21",
+      "datePrecision": "day",
+      "displayDate": "2023",
+      "type": "personal",
+      "title": "Did I Ever Tell You This?",
+      "subtitle": "A life, written down",
+      "description": "After being diagnosed with stage-three angioimmunoblastic T-cell lymphoma in 2022, Neill used a year away from acting to write his memoir. It arrived as a generous, funny collection of memories rather than what he called a cancer book.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/did-i-ever-tell-you-this.jpg",
+          "alt": "The cover of Sam Neill's memoir Did I Ever Tell You This?",
+          "aspectRatio": "2 / 3",
+          "caption": "Published in 2023"
+        }
+      ],
+      "animation": { "preset": "life-default", "intensity": "subtle" },
+      "tags": ["memoir", "writing", "health", "reflection"],
+      "sources": [
+        {
+          "title": "Sam Neill on his new memoir and living with blood cancer",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2023/mar/17/sam-neill-cancer-memoir-interview"
+        },
+        {
+          "title": "Did I Ever Tell You This? — Publisher details",
+          "publisher": "Better Reading",
+          "url": "https://www.betterreading.com.au/review/a-fantastic-unexpected-memoir-read-our-review-of-did-i-ever-tell-you-this-by-sam-neill/"
+        }
+      ]
+    },
+    {
+      "id": "screen-legend-2025",
+      "date": "2025-11-21",
+      "datePrecision": "day",
+      "displayDate": "2025",
+      "type": "honour",
+      "title": "Aotearoa's Screen Legend",
+      "subtitle": "New Zealand Screen Awards",
+      "description": "The New Zealand Screen Awards named Neill its 2025 Screen Legend, celebrating five decades of work that carried New Zealand stories and talent around the world.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/screen-legend-2025.jpg",
+          "alt": "Sir Sam Neill receiving the 2025 Screen Legend Award",
+          "aspectRatio": "3 / 2",
+          "caption": "Named Aotearoa's Screen Legend, 2025"
+        }
+      ],
+      "animation": { "preset": "honour", "intensity": "normal" },
+      "tags": ["honour", "new-zealand", "screen-legend"],
+      "sources": [
+        {
+          "title": "2025 Screen Legend — Sir Sam Neill",
+          "publisher": "New Zealand Screen Awards",
+          "url": "https://www.nzscreenawards.co.nz/screenlegend2025"
+        }
+      ]
+    },
+    {
+      "id": "cancer-free-2026",
+      "date": "2026-04-26",
+      "datePrecision": "day",
+      "displayDate": "April 2026",
+      "type": "life",
+      "title": "Good news — and a hope for others",
+      "subtitle": "Cancer-free after a clinical trial",
+      "description": "After chemotherapy stopped working, Neill joined an Australian clinical trial using CAR T-cell therapy. He announced that scans showed no cancer and used the moment to argue that more patients should have access to the treatment.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/sam-neill-2026.jpg",
+          "alt": "Sam Neill in 2026",
+          "aspectRatio": "4 / 5",
+          "caption": "Cancer-free after a CAR T-cell trial, April 2026"
+        }
+      ],
+      "animation": { "preset": "life-default", "intensity": "subtle" },
+      "tags": ["health", "advocacy", "hope"],
+      "sources": [
+        {
+          "title": "Sam Neill announces he is cancer-free after taking part in Australian clinical trial",
+          "publisher": "The Guardian",
+          "url": "https://www.theguardian.com/film/2026/apr/29/sam-neill-cancer-free-clinical-trial"
+        },
+        {
+          "title": "Sam Neill says he's now cancer-free after chemo stopped working",
+          "publisher": "Variety",
+          "url": "https://variety.com/2026/film/global/sam-neill-cancer-free-chemo-stopped-working-1236732201/"
+        }
+      ]
+    },
+    {
+      "id": "farewell-2026",
+      "date": "2026-07-13",
+      "datePrecision": "day",
+      "displayDate": "13 July 2026",
+      "type": "life",
+      "title": "A life that stays with us",
+      "subtitle": "Sydney, Australia",
+      "description": "Sam Neill died suddenly in Sydney at 78, surrounded by family. His whānau said he remained cancer-free and asked for privacy as they mourned an immeasurable loss. No official cause of death was disclosed in their announcement.",
+      "longDescription": "Across more than five decades, he moved easily between New Zealand stories, Australian cinema, European art films, Hollywood adventures, television, documentary work, writing, and wine. The performances remain — and so do the memories people made while watching them.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/farewell.jpg",
+          "alt": "A portrait of Sam Neill",
+          "focalPoint": { "x": 0.5, "y": 0.3 },
+          "aspectRatio": "4 / 5",
+          "caption": "1947–2026"
+        }
+      ],
+      "featured": true,
+      "animation": { "preset": "memorial", "intensity": "subtle" },
+      "theme": { "background": "midnight" },
+      "tags": ["farewell", "legacy", "memorial"],
+      "sources": [
+        {
+          "title": "New Zealand actor Sam Neill dies aged 78",
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/new-zealand-actor-sam-neill-has-died-family-says-statement-2026-07-13/"
+        },
+        {
+          "title": "Love you Sam — Tributes flow for Kiwi screen legend",
+          "publisher": "1News",
+          "url": "https://www.1news.co.nz/2026/07/13/love-you-sam-tributes-flow-for-kiwi-screen-legend/"
+        }
+      ]
     }
   ]
 }

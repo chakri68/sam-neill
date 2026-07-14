@@ -45,7 +45,8 @@ export const siteSchema = z.object({
   }),
   timelineEnding: z.object({
     text: z.array(z.string()),
-    cta: z.string(),
+    /** Closing fan tribute rendered beneath the text lines. */
+    signoff: z.string().optional(),
   }),
   finalTribute: z.object({
     lines: z.array(z.string()),

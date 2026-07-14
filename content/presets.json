@@ -1,0 +1,81 @@
+{
+  "presets": {
+    "life-default": {
+      "layout": "image-right",
+      "background": "charcoal",
+      "imageTreatment": "warm-archive",
+      "titleFont": "editorial",
+      "yearFont": "mono"
+    },
+    "career-origin": {
+      "layout": "image-right",
+      "background": "charcoal",
+      "imageTreatment": "warm-archive",
+      "titleFont": "editorial",
+      "yearFont": "mono"
+    },
+    "career-breakthrough": {
+      "layout": "image-left",
+      "background": "charcoal",
+      "imageTreatment": "warm-archive",
+      "titleFont": "display",
+      "yearFont": "mono"
+    },
+    "career-milestone": {
+      "layout": "image-right",
+      "background": "charcoal",
+      "imageTreatment": "warm-archive",
+      "titleFont": "display",
+      "yearFont": "mono"
+    },
+    "television-feature": {
+      "layout": "image-right",
+      "background": "charcoal",
+      "imageTreatment": "cinematic",
+      "titleFont": "display",
+      "yearFont": "mono"
+    },
+    "honour": {
+      "layout": "minimal",
+      "background": "charcoal",
+      "imageTreatment": "warm-archive",
+      "titleFont": "display",
+      "yearFont": "mono"
+    },
+    "memorial": {
+      "layout": "text-only",
+      "background": "black",
+      "imageTreatment": "cinematic",
+      "titleFont": "editorial",
+      "yearFont": "display"
+    },
+    "film-feature": {
+      "layout": "full-image",
+      "background": "deepGreen",
+      "imageTreatment": "cinematic",
+      "titleFont": "display",
+      "yearFont": "display"
+    },
+    "award-highlight": {
+      "layout": "image-right",
+      "background": "charcoal",
+      "imageTreatment": "warm-archive",
+      "titleFont": "display",
+      "yearFont": "mono"
+    },
+    "quote-interlude": {
+      "layout": "quote",
+      "background": "black",
+      "imageTreatment": "monochrome",
+      "titleFont": "editorial",
+      "yearFont": "mono"
+    },
+    "tribute-final": {
+      "layout": "text-only",
+      "background": "black",
+      "imageTreatment": "cinematic",
+      "titleFont": "editorial",
+      "yearFont": "display"
+    }
+  }
+}
