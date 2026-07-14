@@ -98,6 +98,10 @@
  * ------------------------------------------------------------------ */
 html {
   scroll-behavior: smooth;
+  /* Gentle snapping: only the one-screen "moment" sections carry a snap
+     point (.snap-start). Proximity, not mandatory — the timeline, video
+     grid, and gallery have no points inside them and scroll free. */
+  scroll-snap-type: y proximity;
   /* Thin, theme-coloured scrollbar (standard properties; Chrome ≥121 + FF) */
   scrollbar-width: thin;
   scrollbar-color: color-mix(
@@ -121,6 +125,12 @@ html {
 .film-feature,
 .quote-interlude {
   scroll-margin-top: calc(-1 * var(--nav-h));
+}
+/* Snap only the exactly-one-screen sections; anything taller stays free.
+   The negative scroll-margin above also offsets the snap area, so these
+   sections snap flush to the true viewport top under the transparent nav. */
+.snap-start {
+  scroll-snap-align: start;
 }
 
 /* Break out of the centered max-width container to true viewport width.

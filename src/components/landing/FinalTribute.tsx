@@ -17,7 +17,7 @@ export function FinalTribute({ id, lines, dates }: FinalTributeProps) {
   return (
     <section
       id={id}
-      className="section-bridge flex min-h-screen flex-col items-center justify-center gap-10 px-[var(--space-page-mobile)] py-32 text-center"
+      className="snap-start section-bridge flex min-h-screen flex-col items-center justify-center gap-10 px-[var(--space-page-mobile)] py-32 text-center"
     >
       <Reveal variant="rise-lg">
         <p className="font-editorial text-bone text-[clamp(2.6rem,7vw,5.75rem)]">

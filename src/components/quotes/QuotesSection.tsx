@@ -58,7 +58,7 @@ export function QuotesSection({ id, eyebrow, title, description, quotes }: Quote
   return (
     <section
       id={id}
-      className="section-bridge relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-[var(--space-page-mobile)] py-28 sm:px-[var(--space-page-tablet)]"
+      className="snap-start section-bridge relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-[var(--space-page-mobile)] py-28 sm:px-[var(--space-page-tablet)]"
     >
       {/* the sticker wall */}
       {STICKERS.map((s) => (
