@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<img src="tribute.jpg" align="right" width="280" alt="Dr. Alan Grant sitting in the grass at dawn, watching brachiosaurs wade through a lake" />
 
-## Getting Started
+### A tribute to Sam Neill.
 
-First, run the development server:
+RIP, dinosaur man. Thanks for making an entire generation fall in love with dinosaurs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I remember arguing with my friends in middle school about how Jurassic World when it was coming out was not gonna be as good as any of the movies from the original trilogy and how Alan Grant was the goat main character. I binge watched the series soo many nights whenever I was feeling low after college because it reminded me of the time I used to dream, dream of becoming as cool as Dr. Alan Grant being quirky, cool, smart.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Me and my sister used to watch random movies on TV and Netflix when we were young and whenever we found a movie of Sam Neill we just used to watch it (yes even event horizon lmao we loved it just coz the dinosaur man Dr. Grant was in it). Thanks Sam for all those countless nights Ive gotten into rabbit holes on dinosaur theories, unreleased concepts of jurassic park 4, searching for Isla Sorna on Google maps and tons of memories with my cousins imitating dinosaurs and debating which ones win.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You'll always be in our hearts. Thanks ♥️

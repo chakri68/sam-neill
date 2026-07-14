@@ -39,7 +39,8 @@
   },
   "footer": {
     "copy": "A fan-made tribute. Not affiliated with Sam Neill or any studio. Photography credited to its owners.",
-    "creditLabel": "Made with care"
+    "creditLabel": "Made with care",
+    "github": "https://github.com/chakri68/sam-neill"
   },
   "social": {
     "ogImage": "socialPreview",

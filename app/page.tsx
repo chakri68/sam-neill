@@ -97,6 +97,19 @@ export default function Home() {
 
         <footer className="px-[var(--space-page-mobile)] py-4 text-center font-ui text-xs text-muted sm:px-[var(--space-page-tablet)] absolute bottom-0 left-0 right-0">
           {site.footer.copy}
+          {site.footer.github ? (
+            <>
+              {" · "}
+              <a
+                href={site.footer.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 transition-colors hover:text-amber"
+              >
+                GitHub
+              </a>
+            </>
+          ) : null}
         </footer>
       </main>
 

@@ -56,6 +56,8 @@ export const siteSchema = z.object({
   footer: z.object({
     copy: z.string(),
     creditLabel: z.string().optional(),
+    /** Source repository — rendered as a small "GitHub" link when set. */
+    github: z.string().optional(),
   }),
   social: z.object({
     ogImage: z.string(),
