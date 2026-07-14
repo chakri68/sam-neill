@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "title": "The Life of Sam Neill",
+  "intro": {
+    "eyebrow": "A life in stories",
+    "title": "Sam Neill",
+    "description": "An exploration of the life, work, and characters that became part of our memories."
+  },
+  "entries": [
+    {
+      "id": "born-1947",
+      "date": "1947-09-14",
+      "displayDate": "1947",
+      "type": "life",
+      "title": "A story begins",
+      "subtitle": "Omagh, Northern Ireland",
+      "description": "Nigel John Dermot Neill was born before his family moved to New Zealand, the landscape that would shape him.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/early-life.jpg",
+          "alt": "An early photograph of Sam Neill",
+          "objectPosition": "center",
+          "caption": "The early years"
+        }
+      ],
+      "animation": { "preset": "life-default", "intensity": "subtle" },
+      "tags": ["early-life"]
+    },
+    {
+      "id": "sleeping-dogs-1977",
+      "date": "1977-10-01",
+      "displayDate": "1977",
+      "type": "film",
+      "title": "Sleeping Dogs",
+      "subtitle": "Smith",
+      "description": "His breakthrough lead in the first New Zealand film to open in the United States. The career had begun.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/sleeping-dogs.jpg",
+          "alt": "Sam Neill in Sleeping Dogs",
+          "credit": "Aardvark Films"
+        }
+      ],
+      "animation": { "preset": "career-breakthrough", "intensity": "normal" },
+      "tags": ["new-zealand", "breakthrough"]
+    },
+    {
+      "id": "quote-craft",
+      "date": "1985-01-01",
+      "type": "personal",
+      "layout": "quote",
+      "title": "On the work",
+      "description": "A reflection on a life spent inhabiting other people.",
+      "quote": {
+        "text": "I've never really thought of myself as a star. I'm a working actor, and I've been lucky enough to keep working.",
+        "attribution": "Sam Neill"
+      },
+      "animation": { "preset": "quote-interlude", "intensity": "subtle" },
+      "tags": ["reflection"]
+    },
+    {
+      "id": "jurassic-park-1993",
+      "date": "1993-06-11",
+      "displayDate": "1993",
+      "type": "film",
+      "title": "Welcome to Jurassic Park",
+      "subtitle": "Dr. Alan Grant",
+      "description": "Sam Neill introduced a generation to one of cinema's most beloved scientists.",
+      "longDescription": "The role of Dr. Alan Grant became one of the defining performances of his career and inspired countless childhood fascinations with dinosaurs, fossils, and science.",
+      "layout": "full-image",
+      "images": [
+        {
+          "src": "/images/timeline/jurassic-park.jpg",
+          "alt": "Sam Neill portraying Dr. Alan Grant",
+          "focalPoint": { "x": 0.5, "y": 0.3 },
+          "credit": "Universal Pictures"
+        }
+      ],
+      "relatedMovies": ["jurassic-park"],
+      "featured": true,
+      "animation": { "preset": "film-feature", "intensity": "cinematic" },
+      "theme": { "background": "deepGreen" },
+      "tags": ["jurassic-park", "alan-grant", "film"]
+    },
+    {
+      "id": "the-piano-1993",
+      "date": "1993-05-15",
+      "displayDate": "1993",
+      "type": "film",
+      "title": "The Piano",
+      "subtitle": "Alisdair Stewart",
+      "description": "A very different 1993 — Jane Campion's Palme d'Or winner showed the range beneath the adventure roles.",
+      "layout": "image-right",
+      "images": [
+        {
+          "src": "/images/timeline/the-piano.jpg",
+          "alt": "Sam Neill in The Piano",
+          "credit": "Miramax"
+        }
+      ],
+      "animation": { "preset": "film-feature", "intensity": "normal" },
+      "tags": ["the-piano", "drama"]
+    },
+    {
+      "id": "vineyard-two-paddocks",
+      "date": "1993-01-01",
+      "displayDate": "1990s",
+      "type": "personal",
+      "title": "Two Paddocks",
+      "subtitle": "Central Otago, New Zealand",
+      "description": "Away from the screen, he planted a vineyard. Pinot noir, olive trees, and a flock of animals he named after co-stars.",
+      "layout": "image-left",
+      "images": [
+        {
+          "src": "/images/timeline/two-paddocks.jpg",
+          "alt": "Vineyard rows in Central Otago",
+          "objectPosition": "center"
+        }
+      ],
+      "animation": { "preset": "life-default", "intensity": "subtle" },
+      "tags": ["wine", "new-zealand", "personal"]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "title": "Sam Neill — One life. Millions of memories.",
+  "hero": {
+    "name": ["Sam", "Neill"],
+    "dates": "1947 — 2026",
+    "tagline": ["One life.", "Millions of memories."],
+    "portrait": "heroPortrait",
+    "scrollPrompt": "Explore his life"
+  },
+  "nav": {
+    "brand": "Sam Neill",
+    "links": [
+      { "label": "Timeline", "target": "timeline" },
+      { "label": "Memories", "target": "memory-machine" },
+      { "label": "Watch", "target": "movie-suggestor" }
+    ],
+    "menuLabel": "Menu"
+  },
+  "timelineIntro": {
+    "title": ["A life", "in stories"],
+    "description": "Before the memories, there was the life that created them."
+  },
+  "transition": {
+    "title": ["The Memory", "Machine"],
+    "description": "A living archive of the moments his work left behind."
+  },
+  "timelineEnding": {
+    "text": ["Every role became", "someone's memory."],
+    "cta": "Enter the Memory Machine"
+  },
+  "finalTribute": {
+    "lines": ["Actors leave.", "Stories don't.", "Memories certainly don't."],
+    "cta": "Share yours",
+    "portrait": "finalTributePortrait"
+  },
+  "footer": {
+    "copy": "A fan-made tribute. Not affiliated with Sam Neill or any studio. Photography credited to its owners.",
+    "creditLabel": "Made with care"
+  },
+  "social": {
+    "ogImage": "socialPreview",
+    "description": "One life. Millions of memories. A cinematic tribute to Sam Neill and the moments his work left behind."
+  },
+  "features": {
+    "memorySubmission": false,
+    "movieSuggestor": false,
+    "memorySearch": false,
+    "memoryStatistics": false,
+    "constellations": false,
+    "audio": false,
+    "easterEggs": true
+  }
+}

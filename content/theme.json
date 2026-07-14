@@ -1,0 +1,33 @@
+{
+  "fonts": {
+    "display": "Tribeca",
+    "editorial": "Cormorant Garamond",
+    "ui": "Geist"
+  },
+  "colours": {
+    "black": "#080907",
+    "charcoal": "#11130f",
+    "deepGreen": "#162018",
+    "forest": "#27372a",
+    "bone": "#e7dfcc",
+    "paper": "#d6cdb8",
+    "muted": "#aaa28f",
+    "amber": "#d49a3a",
+    "darkAmber": "#b87925",
+    "red": "#9e3027",
+    "darkRed": "#5f211d",
+    "night": "#080b14",
+    "nightBlue": "#111827",
+    "star": "#ece6d7"
+  },
+  "textures": {
+    "filmGrain": "filmGrain",
+    "timelinePaper": "paper",
+    "memoryDust": "projectorDust"
+  },
+  "motion": {
+    "enabled": true,
+    "defaultIntensity": "cinematic",
+    "timelineTransition": "line-to-stars"
+  }
+}

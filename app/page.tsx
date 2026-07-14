@@ -1,65 +1,145 @@
-import Image from "next/image";
+import { site, getImage, timeline } from "@/src/content";
+import { TributeImage } from "@/src/components/shared/TributeImage";
+import { Reveal } from "@/src/components/shared/Reveal";
 
+/**
+ * Phase 0 foundation preview. Everything on this page comes from /content
+ * JSON through the validated loaders — no Sam Neill-specific string or image
+ * path is hardcoded here. Phase 1 replaces this with the art-directed hero
+ * and full timeline; for now it proves the content + image + motion pipeline.
+ */
 export default function Home() {
+  const heroPortrait = getImage(site.hero.portrait);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="font-editorial text-bone">
+      {/* Hero */}
+      <section className="relative min-h-screen w-full overflow-hidden">
+        <div className="absolute inset-0">
+          <TributeImage
+            asset={heroPortrait}
+            priority
+            bare
+            sizes="100vw"
+            className="h-full !rounded-none"
+            fallbackLabel={heroPortrait.alt}
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/70 to-transparent" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative z-10 flex min-h-screen flex-col justify-center gap-6 px-[var(--space-page-mobile)] sm:px-[var(--space-page-tablet)] lg:px-[var(--space-page-desktop)]">
+          <Reveal variant="rise-lg">
+            <h1 className="font-display text-bone text-[clamp(3.5rem,12vw,11.875rem)]">
+              {site.hero.name.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </h1>
+          </Reveal>
+          <Reveal variant="fade" delay={220}>
+            <p className="font-ui tracking-[0.2em] text-amber text-sm">{site.hero.dates}</p>
+          </Reveal>
+          <Reveal variant="rise" delay={380}>
+            <p className="max-w-md text-2xl leading-snug text-paper">
+              {site.hero.tagline.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </p>
+          </Reveal>
         </div>
-      </main>
-    </div>
+
+        <Reveal
+          variant="fade"
+          delay={700}
+          className="absolute bottom-8 left-[var(--space-page-mobile)] flex items-center gap-3 sm:left-[var(--space-page-tablet)] lg:left-[var(--space-page-desktop)]"
+        >
+          <span className="eyebrow">{site.hero.scrollPrompt}</span>
+          <span className="block h-10 w-px origin-top bg-amber/70 [animation:ti-grow-line_1.4s_var(--ease-cinematic)_forwards]" />
+        </Reveal>
+      </section>
+
+      {/* Timeline intro */}
+      <section className="mx-auto max-w-[760px] px-[var(--space-page-mobile)] py-32 text-center sm:px-[var(--space-page-tablet)]">
+        <Reveal variant="rise">
+          <p className="eyebrow mb-6">{site.timelineIntro.title.join(" ")}</p>
+          <h2 className="font-display text-bone text-[clamp(2.75rem,7vw,5rem)]">
+            {site.timelineIntro.title.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </h2>
+          <p className="mt-8 text-2xl text-muted">{site.timelineIntro.description}</p>
+        </Reveal>
+      </section>
+
+      {/* Timeline entries — foundation render (Phase 1 art-directs these) */}
+      <section className="mx-auto flex max-w-[1440px] flex-col gap-40 px-[var(--space-page-mobile)] pb-40 sm:px-[var(--space-page-tablet)] lg:px-[var(--space-page-desktop)]">
+        {timeline.entries.map((entry, i) => {
+          const image = entry.images[0];
+          const imageLeft = entry.layout === "image-left" || (!entry.layout && i % 2 === 1);
+          return (
+            <article
+              key={entry.id}
+              id={entry.id}
+              className="grid items-center gap-10 md:grid-cols-2"
+            >
+              {image ? (
+                <Reveal
+                  variant="scale"
+                  className={imageLeft ? "md:order-1" : "md:order-2"}
+                >
+                  <TributeImage
+                    asset={image}
+                    aspectRatio="3 / 2"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    fallbackLabel={entry.title}
+                  />
+                </Reveal>
+              ) : null}
+
+              <Reveal
+                variant="rise"
+                delay={120}
+                className={imageLeft ? "md:order-2" : "md:order-1"}
+              >
+                <p className="font-mono text-amber text-4xl md:text-6xl">
+                  {entry.displayDate ?? entry.date.slice(0, 4)}
+                </p>
+                {entry.quote ? (
+                  <blockquote className="mt-6 text-3xl italic leading-snug text-bone">
+                    “{entry.quote.text}”
+                    {entry.quote.attribution ? (
+                      <footer className="mt-4 font-ui text-sm not-italic tracking-widest text-muted">
+                        — {entry.quote.attribution}
+                      </footer>
+                    ) : null}
+                  </blockquote>
+                ) : (
+                  <>
+                    <h3 className="mt-4 font-display text-bone text-3xl md:text-4xl">
+                      {entry.title}
+                    </h3>
+                    {entry.subtitle ? (
+                      <p className="mt-2 font-ui text-sm uppercase tracking-[0.14em] text-amber">
+                        {entry.subtitle}
+                      </p>
+                    ) : null}
+                    <p className="mt-5 max-w-prose text-xl text-paper">{entry.description}</p>
+                  </>
+                )}
+              </Reveal>
+            </article>
+          );
+        })}
+      </section>
+
+      <footer className="border-t border-bone/10 px-[var(--space-page-mobile)] py-12 text-center font-ui text-xs text-muted sm:px-[var(--space-page-tablet)]">
+        {site.footer.copy}
+      </footer>
+    </main>
   );
 }

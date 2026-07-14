@@ -1,26 +1,262 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ *
+ * Tribeca (display face). Free for personal use; do NOT commit the
+ * woff2 or use commercially without a licence. Drop the files at
+ * /public/fonts/tribeca.woff2 (+ .woff). Until then this @font-face
+ * simply falls back to the stack below — no build error, no crash.
+ * ------------------------------------------------------------------ */
+@font-face {
+  font-family: "Tribeca";
+  src:
+    url("/fonts/tribeca.woff2") format("woff2"),
+    url("/fonts/tribeca.woff") format("woff");
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fonts — Geist & Cormorant come from next/font (variables set in layout) */
+  --font-display: "Tribeca", "Arial Black", "Arial Narrow", sans-serif;
+  --font-editorial: var(--font-cormorant), Georgia, serif;
+  --font-ui: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Colour system (design.md §27) */
+  --color-black: #080907;
+  --color-charcoal: #11130f;
+  --color-deep-green: #162018;
+  --color-forest: #27372a;
+
+  --color-bone: #e7dfcc;
+  --color-paper: #d6cdb8;
+  --color-muted: #aaa28f;
+
+  --color-amber: #d49a3a;
+  --color-dark-amber: #b87925;
+  --color-red: #9e3027;
+  --color-dark-red: #5f211d;
+
+  --color-night: #080b14;
+  --color-night-blue: #111827;
+  --color-star: #ece6d7;
+
+  --space-page-mobile: 20px;
+  --space-page-tablet: 40px;
+  --space-page-desktop: 72px;
+
+  --radius-small: 4px;
+  --radius-medium: 10px;
+  --radius-popup: 14px;
+
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+
+  /* Motion durations */
+  --dur-micro: 180ms;
+  --dur-reveal: 900ms;
+  --dur-section: 1600ms;
 }
 
+/* Expose tokens to Tailwind utilities (bg-charcoal, text-bone, font-display…) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-black: var(--color-black);
+  --color-charcoal: var(--color-charcoal);
+  --color-deep-green: var(--color-deep-green);
+  --color-forest: var(--color-forest);
+  --color-bone: var(--color-bone);
+  --color-paper: var(--color-paper);
+  --color-muted: var(--color-muted);
+  --color-amber: var(--color-amber);
+  --color-dark-amber: var(--color-dark-amber);
+  --color-red: var(--color-red);
+  --color-dark-red: var(--color-dark-red);
+  --color-night: var(--color-night);
+  --color-night-blue: var(--color-night-blue);
+  --color-star: var(--color-star);
+
+  --font-display: var(--font-display);
+  --font-editorial: var(--font-editorial);
+  --font-ui: var(--font-ui);
+  --font-mono: var(--font-mono);
+
+  --ease-cinematic: var(--ease-cinematic);
+  --ease-soft: var(--ease-soft);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-charcoal);
+  color: var(--color-bone);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.05rem, 0.9rem + 0.6vw, 1.35rem);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+  line-height: 0.9;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+  line-height: 1.45;
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+/* ------------------------------------------------------------------ *
+ * Reveal primitive — entrance motion, GPU-cheap, reduced-motion aware
+ * ------------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity var(--dur-reveal) var(--ease-cinematic),
+    transform var(--dur-reveal) var(--ease-cinematic),
+    filter var(--dur-reveal) var(--ease-cinematic);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+.reveal--rise {
+  transform: translateY(28px);
+}
+.reveal--rise-lg {
+  transform: translateY(64px);
+}
+.reveal--blur {
+  filter: blur(14px);
+}
+.reveal--scale {
+  transform: scale(1.04);
+}
+/* fade uses opacity only */
+
+/* ------------------------------------------------------------------ *
+ * TributeImage
+ * ------------------------------------------------------------------ */
+.ti-figure {
+  margin: 0;
+}
+.ti-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-deep-green);
+  border-radius: var(--radius-medium);
+}
+.ti-img {
+  object-fit: cover;
+}
+.ti-img--reveal {
+  opacity: 0;
+  transform: scale(1.03);
+  filter: blur(8px);
+  transition:
+    opacity var(--dur-reveal) var(--ease-cinematic),
+    transform var(--dur-reveal) var(--ease-cinematic),
+    filter var(--dur-reveal) var(--ease-cinematic);
+}
+.ti-img--reveal.is-loaded {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+.ti-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  background-image:
+    radial-gradient(120% 120% at 50% 0%, color-mix(in srgb, var(--color-forest) 60%, transparent) 0%, var(--color-charcoal) 70%),
+    repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-bone) 4%, transparent) 0 2px, transparent 2px 9px);
+}
+.ti-fallback__label {
+  font-family: var(--font-editorial);
+  font-size: 1.05rem;
+  color: color-mix(in srgb, var(--color-bone) 55%, transparent);
+  max-width: 26ch;
+}
+.ti-caption {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  align-items: baseline;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.ti-caption__credit {
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+.ti-caption__credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ti-caption__credit a:hover {
+  color: var(--color-amber);
+}
+
+/* ------------------------------------------------------------------ *
+ * Ambient keyframes (available for later sections)
+ * ------------------------------------------------------------------ */
+@keyframes ti-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -8px, 0); }
+}
+@keyframes ti-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.92; }
+}
+@keyframes ti-grow-line {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+/* ------------------------------------------------------------------ *
+ * Reduced motion — fade only, no transforms, near-instant
+ * ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .ti-img--reveal {
+    transition-duration: 240ms;
+    transform: none !important;
+    filter: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

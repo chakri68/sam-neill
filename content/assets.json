@@ -1,0 +1,48 @@
+{
+  "images": {
+    "heroPortrait": {
+      "src": "/images/hero/sam-neill-hero.jpg",
+      "alt": "Portrait of Sam Neill",
+      "objectPosition": "center 25%",
+      "credit": "",
+      "creditUrl": ""
+    },
+    "memoryBackground": {
+      "src": "/images/memory-machine/background.jpg",
+      "alt": "",
+      "objectPosition": "center"
+    },
+    "moviePopupTexture": {
+      "src": "/images/textures/projector-texture.webp",
+      "alt": ""
+    },
+    "finalTributePortrait": {
+      "src": "/images/hero/sam-neill-final.jpg",
+      "alt": "Sam Neill smiling",
+      "objectPosition": "center 20%"
+    },
+    "socialPreview": {
+      "src": "/images/og/og-image.jpg",
+      "alt": "Sam Neill — The Memory Machine",
+      "width": 1200,
+      "height": 630
+    }
+  },
+  "textures": {
+    "filmGrain": {
+      "src": "/images/textures/film-grain.webp",
+      "opacity": 0.04,
+      "alt": ""
+    },
+    "paper": {
+      "src": "/images/textures/paper.webp",
+      "opacity": 0.06,
+      "alt": ""
+    },
+    "projectorDust": {
+      "src": "/images/textures/projector-dust.webp",
+      "opacity": 0.12,
+      "alt": ""
+    }
+  }
+}
