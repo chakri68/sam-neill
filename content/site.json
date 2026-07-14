@@ -13,6 +13,7 @@
     "links": [
       { "label": "Timeline", "target": "timeline" },
       { "label": "Watch", "target": "watch" },
+      { "label": "Quotes", "target": "quotes" },
       { "label": "Gallery", "target": "gallery" }
     ],
     "menuLabel": "Menu"

@@ -26,6 +26,11 @@ export interface TributeImageProps {
   showCaption?: boolean;
   /** Click-to-enlarge lightbox. Default true; never applies to `bare` images. */
   expandable?: boolean;
+  /**
+   * When set, the expand click is delegated to the caller instead of opening
+   * the built-in lightbox — for galleries that run their own viewer.
+   */
+  onExpand?: () => void;
   /** Text shown inside the neutral placeholder when the image is missing. */
   fallbackLabel?: string;
   className?: string;
@@ -71,6 +76,7 @@ export function TributeImage({
   reveal = true,
   showCaption = true,
   expandable = true,
+  onExpand,
   fallbackLabel,
   className,
   imgClassName,
@@ -152,7 +158,7 @@ export function TributeImage({
 
   if (bare) return frame;
 
-  const lightbox = lightboxOpen ? (
+  const lightbox = !onExpand && lightboxOpen ? (
     <dialog
       ref={dialogRef}
       className={`ti-lightbox ${closing ? "is-closing" : ""}`}
@@ -197,7 +203,7 @@ export function TributeImage({
         <button
           type="button"
           className="ti-expand"
-          onClick={() => setLightboxOpen(true)}
+          onClick={() => (onExpand ? onExpand() : setLightboxOpen(true))}
           aria-haspopup="dialog"
           aria-label={`View larger — ${asset.alt || label || "image"}`}
         >

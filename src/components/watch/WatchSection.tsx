@@ -18,7 +18,7 @@ export function WatchSection({ id, eyebrow, title, description, videos }: WatchS
       id={id}
       className="mx-auto w-full max-w-[1200px] px-[var(--space-page-mobile)] py-24 sm:px-[var(--space-page-tablet)] md:py-32"
     >
-      <Reveal variant="rise" className="mb-14 text-center">
+      <Reveal variant="rise" className="relative mb-14 text-center">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h2 className="font-display mt-3 text-bone text-4xl md:text-6xl">{title}</h2>
         {description ? (

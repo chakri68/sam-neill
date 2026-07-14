@@ -6,6 +6,7 @@ import {
   videosIntro,
   gallery,
   audio,
+  quotes,
 } from "@/src/content";
 import { Nav } from "@/src/components/shared/Nav";
 import { AudioToggle } from "@/src/components/shared/AudioToggle";
@@ -13,6 +14,7 @@ import { Hero } from "@/src/components/landing/Hero";
 import { TimelineIntro } from "@/src/components/timeline/TimelineIntro";
 import { Timeline } from "@/src/components/timeline/Timeline";
 import { WatchSection } from "@/src/components/watch/WatchSection";
+import { QuotesSection } from "@/src/components/quotes/QuotesSection";
 import { GallerySection } from "@/src/components/gallery/GallerySection";
 import { FinalTribute } from "@/src/components/landing/FinalTribute";
 
@@ -69,6 +71,14 @@ export default function Home() {
           title={videosIntro.title}
           description={videosIntro.description}
           videos={videos}
+        />
+
+        <QuotesSection
+          id="quotes"
+          eyebrow={quotes.intro.eyebrow}
+          title={quotes.intro.title}
+          description={quotes.intro.description}
+          quotes={quotes.quotes}
         />
 
         <GallerySection

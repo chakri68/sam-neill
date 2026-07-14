@@ -100,7 +100,11 @@ html {
   scroll-behavior: smooth;
   /* Thin, theme-coloured scrollbar (standard properties; Chrome ≥121 + FF) */
   scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--color-amber) 45%, var(--color-charcoal))
+  scrollbar-color: color-mix(
+      in srgb,
+      var(--color-amber) 45%,
+      var(--color-charcoal)
+    )
     var(--color-charcoal);
   /* Anchored content (deep links, nav) rests below the fixed nav instead of
      under it. Full-bleed moment sections cancel this — see below. */
@@ -375,6 +379,7 @@ body {
 }
 .ti-lightbox__img {
   object-fit: contain;
+  border-radius: var(--radius-popup);
 }
 .ti-lightbox__caption {
   justify-content: center;
@@ -407,6 +412,54 @@ body {
 .ti-lightbox__close:focus-visible {
   outline: 2px solid var(--color-amber);
   outline-offset: 2px;
+}
+/* Gallery viewer navigation — ‹ › at the dialog's vertical middle */
+.ti-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--color-bone) 25%, transparent);
+  background: color-mix(in srgb, var(--color-black) 65%, transparent);
+  color: var(--color-bone);
+  font-family: var(--font-editorial);
+  font-size: 1.7rem;
+  line-height: 1;
+  padding-bottom: 0.2rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition:
+    background-color var(--dur-micro) var(--ease-soft),
+    color var(--dur-micro) var(--ease-soft),
+    transform var(--dur-micro) var(--ease-soft);
+}
+.ti-lightbox__nav:hover {
+  background: color-mix(in srgb, var(--color-black) 88%, transparent);
+  color: var(--color-amber);
+  transform: translateY(-50%) scale(1.07);
+}
+.ti-lightbox__nav:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+.ti-lightbox__nav--prev {
+  left: 0.8rem;
+}
+.ti-lightbox__nav--next {
+  right: 0.8rem;
+}
+.ti-lightbox__count {
+  margin-top: 0.4rem;
+  text-align: center;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--color-muted);
 }
 /* No page scroll behind the lightbox */
 body:has(.ti-lightbox[open]) {
@@ -784,6 +837,19 @@ body:has(.ti-lightbox[open]) {
 }
 
 /* ------------------------------------------------------------------ *
+ * Toy cutouts — small figures tucked behind card edges and buttons,
+ * peeking out. Static on purpose: motion made them read as clickable.
+ * ------------------------------------------------------------------ */
+.cutout {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.92;
+  filter: saturate(0.85) drop-shadow(0 5px 12px rgba(0, 0, 0, 0.45));
+}
+
+/* ------------------------------------------------------------------ *
  * Sources popover — tiny ⓘ beside entry copy, panel of citation links
  * ------------------------------------------------------------------ */
 .sources {
@@ -885,16 +951,24 @@ body:has(.ti-lightbox[open]) {
   }
 }
 .video-card {
-  overflow: hidden;
+  /* Overflow stays visible so toys can peek from behind the top edge;
+     the media box does its own corner clipping. */
+  position: relative;
   border-radius: var(--radius-popup);
   border: 1px solid color-mix(in srgb, var(--color-bone) 10%, transparent);
-  background: linear-gradient(160deg, var(--color-deep-green), var(--color-charcoal) 72%);
+  background: linear-gradient(
+    160deg,
+    var(--color-deep-green),
+    var(--color-charcoal) 72%
+  );
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
 }
 .video-card__media {
   position: relative;
   aspect-ratio: 16 / 9;
   background: var(--color-black);
+  overflow: hidden;
+  border-radius: var(--radius-popup) var(--radius-popup) 0 0;
 }
 .video-card__media iframe {
   position: absolute;
@@ -1183,7 +1257,8 @@ body:has(.ti-lightbox[open]) {
     box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-amber) 0%, transparent);
   }
   50% {
-    box-shadow: 0 0 18px 2px color-mix(in srgb, var(--color-amber) 22%, transparent);
+    box-shadow: 0 0 18px 2px
+      color-mix(in srgb, var(--color-amber) 22%, transparent);
   }
 }
 
@@ -1209,5 +1284,115 @@ body:has(.ti-lightbox[open]) {
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Quotes rotator — one card at a time over the sticker wall
+ * ------------------------------------------------------------------ */
+.quote-sticker {
+  opacity: 0.5;
+  filter: saturate(0.7) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
+}
+.quote-card {
+  width: 100%;
+  padding: 2.2rem 2.4rem 2rem;
+  border-radius: var(--radius-popup);
+  border: 1px solid color-mix(in srgb, var(--color-bone) 12%, transparent);
+  background: color-mix(in srgb, var(--color-charcoal) 88%, transparent);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
+  animation: quote-in 480ms var(--ease-cinematic);
+  /* Fixed height: the card claims all the room the section can spare, so the
+     button below never shifts. Long quotes scroll inside. */
+  height: min(48vh, 26rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+}
+/* Auto block margins centre short quotes in the fixed box, and collapse to
+   zero when content overflows — unlike flex centering, the top stays
+   reachable while scrolling. */
+.quote-card__body {
+  margin-block: auto;
+}
+@keyframes quote-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.985);
+  }
+}
+.quote-card__lines {
+  display: grid;
+  gap: 0.7rem;
+}
+.quote-card__line {
+  font-family: var(--font-editorial);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.5;
+  color: var(--color-paper);
+}
+.quote-card__speaker {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-amber);
+  margin-bottom: 0.15rem;
+}
+.quote-card__direction {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+.quote-card__context {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-bottom: 0.8rem;
+}
+.quote-card__text {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  line-height: 1.5;
+  color: var(--color-bone);
+}
+.quote-card__source {
+  margin-top: 1.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-amber);
+}
+
+/* ------------------------------------------------------------------ *
+ * Gallery viewer — direction-aware slide for next / previous
+ * ------------------------------------------------------------------ */
+.ti-lightbox__mover {
+  position: absolute;
+  inset: 0;
+}
+.ti-lightbox__mover.is-next {
+  animation: lightbox-slide-next 380ms var(--ease-cinematic);
+}
+.ti-lightbox__mover.is-prev {
+  animation: lightbox-slide-prev 380ms var(--ease-cinematic);
+}
+@keyframes lightbox-slide-next {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+}
+@keyframes lightbox-slide-prev {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
   }
 }

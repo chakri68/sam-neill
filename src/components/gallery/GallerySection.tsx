@@ -1,5 +1,5 @@
-import { TributeImage } from "@/src/components/shared/TributeImage";
 import { Reveal } from "@/src/components/shared/Reveal";
+import { GalleryGrid } from "./GalleryGrid";
 import type { ImageAsset } from "@/src/content/schemas/image";
 
 export interface GallerySectionProps {
@@ -21,25 +21,14 @@ export function GallerySection({ id, eyebrow, title, description, images }: Gall
       id={id}
       className="mx-auto w-full max-w-[1440px] px-[var(--space-page-mobile)] py-24 sm:px-[var(--space-page-tablet)] md:py-32 lg:px-[var(--space-page-desktop)]"
     >
-      <Reveal variant="rise" className="mb-14 text-center">
+      <Reveal variant="rise" className="relative mb-14 text-center">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h2 className="font-display mt-3 text-bone text-4xl md:text-6xl">{title}</h2>
         {description ? (
           <p className="mx-auto mt-4 max-w-xl text-xl italic text-muted">{description}</p>
         ) : null}
       </Reveal>
-      <div className="gallery-grid treat-warm-archive">
-        {images.map((image) => (
-          <Reveal key={image.src} variant="scale">
-            <TributeImage
-              asset={image}
-              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-              showCaption={false}
-              fallbackLabel={image.alt}
-            />
-          </Reveal>
-        ))}
-      </div>
+      <GalleryGrid images={images} />
     </section>
   );
 }

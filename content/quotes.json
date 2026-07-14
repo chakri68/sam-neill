@@ -1,0 +1,1631 @@
+{
+  "version": 1,
+  "intro": {
+    "eyebrow": "Say it again, Sam",
+    "title": "Lines to remember",
+    "description": "From the films, and from the man himself."
+  },
+  "quotes": [
+    {
+      "id": "q-001",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Amanda",
+          "text": "This is how you make dinosaurs?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "No. This is how you play God."
+        }
+      ]
+    },
+    {
+      "id": "q-002",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Erik",
+          "text": "I read both of your books. I liked the first one more. Before you were on the island. You liked dinosaurs back then."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Back then, they hadn't tried to eat me yet."
+        }
+      ]
+    },
+    {
+      "id": "q-003",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Symposium Leader",
+          "text": "Now, does anyone have a question?"
+        },
+        {
+          "text": "many people in the audience raise their hands",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Fine. Does anyone have a question that does not relate to Jurassic Park?"
+        },
+        {
+          "text": "most people lower their hand",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Or the incident in San Diego, which I did not witness?"
+        },
+        {
+          "text": "nearly everyone else lowers their hand",
+          "direction": true
+        }
+      ]
+    },
+    {
+      "id": "q-004",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Billy Brennan",
+          "text": "You have to believe me, this was a stupid decision, but I did it with the best intentions."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "With the best intentions? Some of the worst things imaginable have been done with the best intentions. You know what, Billy? As far as I'm concerned, you're no better than the people that built this place."
+        }
+      ]
+    },
+    {
+      "id": "q-005",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "I have a theory that there are two kinds of boys. There are those that want to be astronomers, and those that want to be astronauts. The astronomer, or the paleontologist, gets to study these amazing things from a place of complete safety."
+        },
+        {
+          "speaker": "Erik",
+          "text": "But then you never get to go into space."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Exactly. That's the difference between imagining and seeing: to be able to touch them. And that's... that's all that Billy wanted."
+        },
+        {
+          "text": "a field of beautiful dinosaurs comes into view",
+          "direction": true
+        }
+      ]
+    },
+    {
+      "id": "q-006",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Did you read Malcolm's book?"
+        },
+        {
+          "text": "Erik nods",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "So?"
+        },
+        {
+          "speaker": "Erik",
+          "text": "I don't know. It was kinda preachy. And too much Chaos. Everything Chaos. It just seemed like the guy was high on himself."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "That's two things we have in common."
+        }
+      ]
+    },
+    {
+      "id": "q-007",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "It's OK. It's dead."
+        },
+        {
+          "text": "a T-Rex raises its head out of the carcass",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Nobody move a muscle."
+        },
+        {
+          "text": "the T-Rex roars and the team runs off",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Shit!"
+        }
+      ]
+    },
+    {
+      "id": "q-008",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Why me?"
+        },
+        {
+          "speaker": "Paul Kirby",
+          "text": "He said we needed someone who'd been on the island before."
+        },
+        {
+          "speaker": "Udesky",
+          "text": "Yes, but I did not tell you to kidnap somebody!"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "I have never been on this island."
+        },
+        {
+          "speaker": "Paul Kirby",
+          "text": "Sure you have, you wrote that book."
+        },
+        {
+          "speaker": "Billy Brennan",
+          "text": "That was Isla Nublar. This is Isla Sorna - Site B."
+        }
+      ]
+    },
+    {
+      "id": "q-009",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Charlie",
+          "text": "Rawr! Rawr Rawr!"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Actually, Charlie, those are herbivores. They really wouldn't be interested in fighting with each other, but these ones here are carnivores, and they really like fighting with each other. They'll use their teeth and claws to rip each other's throats out."
+        },
+        {
+          "speaker": "Ellie Degler",
+          "text": "Alan, he's three. Let's wait till he's five."
+        }
+      ]
+    },
+    {
+      "id": "q-010",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Great, just great. We're in the worst place in the world and we're not even being paid."
+        }
+      ]
+    },
+    {
+      "id": "q-011",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Erik",
+          "text": "Be careful with that. T-Rex. It scares some of the smaller ones away but attracts one really big one with the fin."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "This is T-Rex pee?"
+        },
+        {
+          "text": "Eric nods yes",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "How'd you get it?"
+        },
+        {
+          "speaker": "Erik",
+          "text": "You don't wanna know."
+        }
+      ]
+    },
+    {
+      "id": "q-012",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Paul",
+          "text": "What are you doing? Those things are after us because of those!"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Those things know we have the eggs. If I drop them in the river, they'll still be after us."
+        },
+        {
+          "speaker": "Paul",
+          "text": "What if they catch us with them?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "What if they catch us without them?"
+        }
+      ]
+    },
+    {
+      "id": "q-013",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Erik, I have to tell you, I'm astonished that you've lasted eight weeks on this island."
+        },
+        {
+          "speaker": "Erik",
+          "text": "... Is that all it's been?"
+        }
+      ]
+    },
+    {
+      "id": "q-014",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Oh my God."
+        },
+        {
+          "speaker": "Amanda",
+          "text": "What is it?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "It's a bird cage."
+        },
+        {
+          "speaker": "Amanda",
+          "text": "For what?"
+        }
+      ]
+    },
+    {
+      "id": "q-015",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Billy Brennan",
+          "text": "I don't remember that one being on InGen's list."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "It wasn't on their list. Which makes you wonder what else they were up to."
+        }
+      ]
+    },
+    {
+      "id": "q-016",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Reporter",
+          "text": "Are you saying you wouldn't want to get on Isla Sorna and study them if you had the chance?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "No force on earth or heaven could get me on that island."
+        }
+      ]
+    },
+    {
+      "id": "q-017",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "On this island there is no such thing as safe."
+        }
+      ]
+    },
+    {
+      "id": "q-018",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Erik",
+          "text": "Wow. You have to thank her now. She sent the Navy and the Marines!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "God bless you, Ellie."
+        }
+      ]
+    },
+    {
+      "id": "q-019",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Billy Brennan",
+          "text": "I rescued your hat."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Well... that's the important thing."
+        }
+      ]
+    },
+    {
+      "id": "q-020",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "We haven't landed yet."
+        }
+      ]
+    },
+    {
+      "id": "q-021",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "text": "last lines",
+          "direction": true
+        },
+        {
+          "speaker": "Erik",
+          "text": "Where do you think they're going?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "I don't know. Maybe just looking for new nesting grounds. It's a whole new world for them."
+        },
+        {
+          "speaker": "Amanda",
+          "text": "I dare 'em to nest in Enid, Oklahoma."
+        }
+      ]
+    },
+    {
+      "id": "q-022",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Reverse Darwinism - survival of the most idiotic."
+        }
+      ]
+    },
+    {
+      "id": "q-023",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Paul Kirby",
+          "text": "What was that?"
+        },
+        {
+          "speaker": "Billy Brennan",
+          "text": "It's a Tyrannosaurus."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "I don't think so. It sounds bigger."
+        }
+      ]
+    },
+    {
+      "id": "q-024",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "Either way... you probably won't get off this island alive."
+        }
+      ]
+    },
+    {
+      "id": "q-025",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Erik",
+          "text": "That lady you called."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Hmm?"
+        },
+        {
+          "speaker": "Erik",
+          "text": "Who is she? How do you that she can help us?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "She was the one person I could always count on. I owe her a lot. Although I don't think I ever told her that."
+        },
+        {
+          "speaker": "Erik",
+          "text": "You should."
+        }
+      ]
+    },
+    {
+      "id": "q-026",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Ellie Degler",
+          "text": "So what were you doing?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Evolving."
+        }
+      ]
+    },
+    {
+      "id": "q-027",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Billy Brennan",
+          "text": "Alan, I want to thank you for bringing me along."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Yeah, well, the bones will still be there when we get back. That's the great thing about bones; they never run away. The truth is, you got me into this, and I have no intention of being on my own with these people. Don't get too excited, Billy. Chances are we won't see a thing. Your turn to be nice. Wake me when we get there."
+        }
+      ]
+    },
+    {
+      "id": "q-028",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Billy Brennan",
+          "text": "So, how'd it go?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Well, it's not too late to change your major, Billy."
+        },
+        {
+          "speaker": "Billy Brennan",
+          "text": "Not good, huh?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Worse. We're gonna have to pack up in four weeks."
+        },
+        {
+          "speaker": "Billy Brennan",
+          "text": "Three. I had to rent some equipment. Come here, I gotta show you something. You like computers, right?"
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "I like the abacus, Billy."
+        }
+      ]
+    },
+    {
+      "id": "q-029",
+      "kind": "dialogue",
+      "source": "Jurassic Park III (2001)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "What are you doing?"
+        },
+        {
+          "speaker": "Billy Brennan",
+          "text": "I was photographing the nest."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Don't do that again."
+        },
+        {
+          "speaker": "Billy Brennan",
+          "text": "Sorry."
+        }
+      ]
+    },
+    {
+      "id": "q-030",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Ellie Sattler",
+          "text": "So, what are you thinking?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "We're out of a job."
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Don't you mean extinct?"
+        }
+      ]
+    },
+    {
+      "id": "q-031",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "text": "last lines",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Hammond, after careful consideration, I've decided, not to endorse your park."
+        },
+        {
+          "speaker": "John Hammond",
+          "text": "So have I."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Come on. Come on."
+        }
+      ]
+    },
+    {
+      "id": "q-032",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "You got any kids?"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Me? Oh, hell yeah, three. I love kids. Anything at all can and does happen. Same with wives, for that matter."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "You're married?"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Occasionally. Yeah, I'm always on the lookout for a future ex-Mrs. Malcolm."
+        }
+      ]
+    },
+    {
+      "id": "q-033",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "T-Rex doesn't want to be fed. He wants to hunt. Can't just suppress 65 million years of gut instinct."
+        }
+      ]
+    },
+    {
+      "id": "q-034",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Tim",
+          "text": "Well... we're back... in the car again."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Well, at least you're out of the tree."
+        }
+      ]
+    },
+    {
+      "id": "q-035",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "John Hammond",
+          "text": "...And there's no doubt; our attractions will drive kids our of their minds!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "And what are those?"
+        },
+        {
+          "speaker": "Dr. Ellie Sattler",
+          "text": "Small versions of adults, honey..."
+        }
+      ]
+    },
+    {
+      "id": "q-036",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I guess that means the power's off."
+        },
+        {
+          "text": "Grant grabs the fence, pretending to be electrocuted and Lex and Tim scream",
+          "direction": true
+        },
+        {
+          "speaker": "Lex",
+          "text": "That's not funny."
+        },
+        {
+          "speaker": "Tim",
+          "text": "That was great."
+        }
+      ]
+    },
+    {
+      "id": "q-037",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Tim",
+          "text": "What do you call a blind dinosaur?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I don't know. What do you call a blind dinosaur?"
+        },
+        {
+          "speaker": "Tim",
+          "text": "A Do-you-think-he-saurus."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Ha ha. Good one."
+        },
+        {
+          "speaker": "Tim",
+          "text": "What do you call a blind dinosaur's dog?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "You got me."
+        },
+        {
+          "speaker": "Tim",
+          "text": "A Do-you-think-he-saurus Rex."
+        }
+      ]
+    },
+    {
+      "id": "q-038",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Well, where does he think he's going?"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "When you gotta go, you gotta go."
+        }
+      ]
+    },
+    {
+      "id": "q-039",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Their radio is out too. Gennarro said to stay put."
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "The kids OK?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I didn't ask. Why wouldn't they be?"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Kids get scared."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "What's to be scared about? It's just a little hiccup in the power..."
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "I didn't say I was scared."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I didn't say you were scared."
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "I know."
+        }
+      ]
+    },
+    {
+      "id": "q-040",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Big Tim, the human piece of toast."
+        }
+      ]
+    },
+    {
+      "id": "q-041",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Mr. Hammond, the phones are working."
+        },
+        {
+          "speaker": "John Hammond",
+          "text": "Are the children all right?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "The children are fine. Call the mainland. Tell them to send the damn helicopters."
+        },
+        {
+          "text": "we hear the raptors smashing the windows",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Ellie Sattler",
+          "text": "It's gonna come through the glass!"
+        },
+        {
+          "text": "Grant starts shooting at it. Hammond listens to the noises",
+          "direction": true
+        },
+        {
+          "speaker": "John Hammond",
+          "text": "GRANT!"
+        }
+      ]
+    },
+    {
+      "id": "q-042",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "They're moving in herds. They do move in herds."
+        }
+      ]
+    },
+    {
+      "id": "q-043",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Tim. Tim, can you tell me what they are?"
+        },
+        {
+          "speaker": "Tim",
+          "text": "They're, Gal... uh... uh, Galli... uh, Gallimimus."
+        },
+        {
+          "speaker": "Lex",
+          "text": "Are those... meat-eating... uh, meatasauruses?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "The wheel uniform changes just like a flock of birds evading a predator."
+        },
+        {
+          "speaker": "Tim",
+          "text": "They're, uh... they're flocking this way."
+        }
+      ]
+    },
+    {
+      "id": "q-044",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "What the hell do you think you're doing in here?"
+        },
+        {
+          "text": "John pops open a bottle of champagne. The cork comes flying at Grant and he ducks",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Hey, we were saving that."
+        },
+        {
+          "speaker": "John Hammond",
+          "text": "For today, I guarantee it."
+        }
+      ]
+    },
+    {
+      "id": "q-045",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "text": "They're feeding leafy branches to a docile Brachiosaurus",
+          "direction": true
+        },
+        {
+          "speaker": "Lex",
+          "text": "Can I touch it?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Sure. Just think of it as... kind of a big cow."
+        }
+      ]
+    },
+    {
+      "id": "q-046",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Don't move! He can't see us if we don't move."
+        }
+      ]
+    },
+    {
+      "id": "q-047",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "What did I touch?"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Uh, you didn't touch anything. We stopped."
+        }
+      ]
+    },
+    {
+      "id": "q-048",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "What if the dinosaurs come back while we're all asleep?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Hmm. I'll stay awake."
+        },
+        {
+          "speaker": "Lex",
+          "text": "All night?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "All night."
+        }
+      ]
+    },
+    {
+      "id": "q-049",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Tim",
+          "text": "I threw up."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Oh, well that's OK. Give me your hand."
+        },
+        {
+          "text": "Tim refuses to move from the car",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Tim, I won't tell anyone you threw up, just... just give me your hand."
+        }
+      ]
+    },
+    {
+      "id": "q-050",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "OK, it's just the two Raptors, right?"
+        },
+        {
+          "text": "to Ellie",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "You're sure the third one's contained?"
+        },
+        {
+          "speaker": "Dr. Ellie Sattler",
+          "text": "Yes, unless they figure out how to open doors."
+        }
+      ]
+    },
+    {
+      "id": "q-051",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "He left us! He left us!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "But that's *not* what *I'm* gonna do."
+        }
+      ]
+    },
+    {
+      "id": "q-052",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "What species is this?"
+        },
+        {
+          "speaker": "Henry Wu",
+          "text": "Uh, it's a velociraptor."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "You bred raptors?"
+        }
+      ]
+    },
+    {
+      "id": "q-053",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Hey, hey, hey, hey!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Ian, freeze!"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Get the kids!"
+        },
+        {
+          "text": "the T-rex sees the flare, roars at Malcolm, and runs after him",
+          "direction": true
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Get rid of the flare!"
+        },
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "Get the kids!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Get rid of the flare!"
+        }
+      ]
+    },
+    {
+      "id": "q-054",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Ian Malcolm",
+          "text": "She's, uh... tenacious."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "You have no idea."
+        }
+      ]
+    },
+    {
+      "id": "q-055",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "It's just like climbing down from a treehouse. Did your Dad ever build you a treehouse?"
+        },
+        {
+          "speaker": "Tim",
+          "text": "No."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "No, dammit!"
+        }
+      ]
+    },
+    {
+      "id": "q-056",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Volunteer #1",
+          "text": "This new program's incredible. A few more years development and we won't even have to dig anymore."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Where's the fun in that?"
+        }
+      ]
+    },
+    {
+      "id": "q-057",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "Go away!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "It's OK. It's OK. It's a Brachiosaur."
+        },
+        {
+          "speaker": "Tim",
+          "text": "It's a veggiesaurus Lex! Veggiesaurus!"
+        },
+        {
+          "speaker": "Lex",
+          "text": "Veggie!"
+        }
+      ]
+    },
+    {
+      "id": "q-058",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "What are you and Ellie gonna do now if you don't have to pick up dinosaur bones anymore?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I don't know. I guess... I guess we'll just have to evolve too."
+        }
+      ]
+    },
+    {
+      "id": "q-059",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Uh... it's... it's a dinosaur!"
+        }
+      ]
+    },
+    {
+      "id": "q-060",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "What kind of park is this?"
+        },
+        {
+          "speaker": "John Hammond",
+          "text": "It's right up your alley."
+        }
+      ]
+    },
+    {
+      "id": "q-061",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "Sh. Sh. Don't let the monsters come over here."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "They're not monsters, Lex. They're just animals. And these are herbivores."
+        },
+        {
+          "speaker": "Tim",
+          "text": "That means they only eat vegetables, but for you I think they'd make an exception."
+        },
+        {
+          "speaker": "Lex",
+          "text": "I hate the other kind."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "They just do what they do."
+        }
+      ]
+    },
+    {
+      "id": "q-062",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Ellie, this one was always my favorite when I was a kid. And now I've seen one, its the most beautiful thing I ever saw."
+        }
+      ]
+    },
+    {
+      "id": "q-063",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "I want to go now."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Look how it eats."
+        },
+        {
+          "speaker": "Lex",
+          "text": "Please!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I bet you'll never look at birds the same way again."
+        }
+      ]
+    },
+    {
+      "id": "q-064",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I hate computers."
+        },
+        {
+          "speaker": "Dr. Ellie Sattler",
+          "text": "The feeling's mutual."
+        }
+      ]
+    },
+    {
+      "id": "q-065",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "I hate trees!"
+        }
+      ]
+    },
+    {
+      "id": "q-066",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Tim",
+          "text": "It looks like it has a cold."
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Yeah, maybe."
+        }
+      ]
+    },
+    {
+      "id": "q-067",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Keep absolutely still. Its vision is based on movement."
+        }
+      ]
+    },
+    {
+      "id": "q-068",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "John Hammond",
+          "text": "Well, we clocked the T-Rex at 32 mph"
+        },
+        {
+          "speaker": "Dr. Ellie Sattler",
+          "text": "T-Rex... , you said you've got a T-Rex?"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Say again"
+        },
+        {
+          "speaker": "John Hammond",
+          "text": "We have a T-Rex"
+        }
+      ]
+    },
+    {
+      "id": "q-069",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Hey!"
+        }
+      ]
+    },
+    {
+      "id": "q-070",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Lex, Lex you're choking me! Grab the wire! Grab the wire!"
+        },
+        {
+          "text": "Lex grabs a loose wire of the electric fence just as the T-Rex pushes the car with Tim inside over the edge just missing Grant and Lex by inches",
+          "direction": true
+        }
+      ]
+    },
+    {
+      "id": "q-071",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Lex",
+          "text": "Timmy!"
+        },
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Tim!"
+        },
+        {
+          "text": "the T-Rex tries to push the car with Tim inside over an embankment",
+          "direction": true
+        }
+      ]
+    },
+    {
+      "id": "q-072",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Look at the pubic bone, turned backward."
+        }
+      ]
+    },
+    {
+      "id": "q-073",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Dinosaurs eat man. Woman inherits the earth."
+        }
+      ]
+    },
+    {
+      "id": "q-074",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Alan Grant",
+          "text": "Hammond, after careful consideration, I've decided, not to endorse your park."
+        }
+      ]
+    },
+    {
+      "id": "q-075",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "With the best intentions? Some of the worst things imaginable have been done with the best intentions. You know what, Billy? As far as I'm concerned, you're no better than the people that built this place."
+        }
+      ]
+    },
+    {
+      "id": "q-076",
+      "kind": "dialogue",
+      "source": "Jurassic Park (1993)",
+      "lines": [
+        {
+          "speaker": "Dr. Grant",
+          "text": "I have a theory that there are two kinds of boys. There are those that want to be astronomers, and those that want to be astronauts. The astronomer, or the paleontologist, gets to study these amazing things from a place of complete safety."
+        },
+        {
+          "speaker": "Erik",
+          "text": "But then you never get to go into space."
+        },
+        {
+          "speaker": "Dr. Grant",
+          "text": "Exactly. That's the difference between imagining and seeing: to be able to touch them. And that's... that's all that Billy wanted."
+        }
+      ]
+    },
+    {
+      "id": "q-077",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "text": "Of all the characters I've played, I think I have more in common with that guy than with Reilly: Ace of Spies (1983) referring to Carl Fitzgerald in Death in Brunswick (1990). Who Weekly (NZ) 8/23/93."
+    },
+    {
+      "id": "q-078",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "Referring to The Simpsons (1989) — EW, 7/23/93",
+      "text": "I'm playing a cat burglar. I've made it. This is the high point of my career. I'm really chuffed"
+    },
+    {
+      "id": "q-079",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "text": "If all I did was acting, I'd go out of my mind."
+    },
+    {
+      "id": "q-080",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "text": "The pathetic thing about actors is they don't feel valid unless they're acting."
+    },
+    {
+      "id": "q-081",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "2012, on Dead Calm (1989",
+      "text": ") Well, that was fantastically good fun, actually, although quite a lot of the time we were seasick and cold and wet and stuff like that. It was a very interesting film to do, as there were only three characters, you know, but it works very well, and it built quite a few careers. For [director] Phillip Noyce, it launched him into big action films, and there's this Australian actress called Nicole Kidman in it who you might've heard of..."
+    },
+    {
+      "id": "q-082",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "2014, on socializing with Michael Williams and Warren Clarke during the making of Enigma (1982)",
+      "text": "My liver is still recovering."
+    },
+    {
+      "id": "q-083",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "on changing his name from Nigel to Sam, aged ten",
+      "text": "I saved myself a lifetime of pain."
+    },
+    {
+      "id": "q-084",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "Tell us a secret.",
+      "text": "I was christened Nigel. It set me back for years."
+    },
+    {
+      "id": "q-085",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "Which living person do you most admire, and why?",
+      "text": "My brother, Michael. He is an academic and has devoted his life to scholarship; my life seems trivial by comparison. Bastard."
+    },
+    {
+      "id": "q-086",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What did you want to be when you were growing up?",
+      "text": "A soldier like my father. I would have been useless."
+    },
+    {
+      "id": "q-087",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "Which words or phrases do you most overuse?",
+      "text": "I'm sorry to say, the word is fuck."
+    },
+    {
+      "id": "q-088",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What keeps you awake at night?",
+      "text": "Worrying about insomnia."
+    },
+    {
+      "id": "q-089",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What do you most dislike about your appearance?",
+      "text": "Pretty much all of it. But these weird fat bits on my hips - yuck!"
+    },
+    {
+      "id": "q-090",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What song would you like played at your funeral?",
+      "text": "I Will Remember You, by Sarah McLachlan. That'll choke the bastards up if nothing else will."
+    },
+    {
+      "id": "q-091",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What is the trait you most deplore in yourself?",
+      "text": "Sloth. No, wait, greed. No, gluttony."
+    },
+    {
+      "id": "q-092",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What has been your biggest disappointment?",
+      "text": "My complete ineptitude at sport."
+    },
+    {
+      "id": "q-093",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What is the worst job you've done?",
+      "text": "Everyone says it's the Fifa film [United Passions], but I had a marvellous time."
+    },
+    {
+      "id": "q-094",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "Who would play you in the film of your life?",
+      "text": "Tilda Swinton."
+    },
+    {
+      "id": "q-095",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What makes you unhappy?",
+      "text": "Solitude. I crave company."
+    },
+    {
+      "id": "q-096",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What is your guiltiest pleasure?",
+      "text": "Come Dine With Me. Everything you need to know about the British in one tidy hour."
+    },
+    {
+      "id": "q-097",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "What is the worst thing anyone's said to you?",
+      "text": "Did we sleep together? Really? Are you quite sure?"
+    },
+    {
+      "id": "q-098",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "on working with Meryl Streep on Plenty (1985) and A Cry in the Dark (1988)",
+      "text": "By the time we did the second I was very comfortable with her. She scared the shit out of me in the first one. I was too young and too bedazzled by her. I was daunted. And I think on day one we had a sex scene. I wonder how many actors have done sex scenes with Meryl Streep. Probably just a handful."
+    },
+    {
+      "id": "q-099",
+      "kind": "interview",
+      "source": "Sam Neill",
+      "context": "on Priscilla: Queen of the Desert",
+      "text": "The only regret I do have is that I did turn down Priscilla. It's probably indiscreet to say, but I'll say it anyway - Terence Stamp ended up playing the part. It would've been fun to play with my mate Hugo [Weaving] and Guy [Pearce], of course. I made a mistake there, because it wasn't about being in drag, which I'd be happy to do - I wear a dress all the time anyway."
+    },
+    {
+      "id": "q-100",
+      "kind": "line",
+      "source": "Event Horizon (1997)",
+      "character": "Dr. William Weir",
+      "text": "Where we're going, we won't need eyes to see."
+    },
+    {
+      "id": "q-101",
+      "kind": "line",
+      "source": "Event Horizon (1997)",
+      "character": "Dr. William Weir",
+      "text": "Hell is just a word. The reality is much worse."
+    },
+    {
+      "id": "q-102",
+      "kind": "line",
+      "source": "The Hunt for Red October (1990)",
+      "character": "Captain Vasily Borodin",
+      "text": "I would have liked to have seen Montana."
+    },
+    {
+      "id": "q-103",
+      "kind": "line",
+      "source": "Hunt for the Wilderpeople (2016)",
+      "character": "Hector Faulkner",
+      "text": "Me and this fat kid, we ran, we ate, and read books, and it was the best."
+    },
+    {
+      "id": "q-104",
+      "kind": "line",
+      "source": "Hunt for the Wilderpeople (2016)",
+      "character": "Hector Faulkner",
+      "text": "Pretty majestical, aye?"
+    }
+  ]
+}
