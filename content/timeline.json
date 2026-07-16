@@ -2,7 +2,7 @@
   "version": 1,
   "title": "The Life of Sam Neill",
   "research": {
-    "lastVerified": "2026-07-14",
+    "lastVerified": "2026-07-16",
     "dateConvention": "Exact dates are used where a reliable source provides one. Entries known only to a year use January 1 as a sortable placeholder and set datePrecision to year.",
     "editorialNote": "Descriptions are concise editorial summaries based on the attached sources. Image paths are replaceable local placeholders; source links do not grant image-reuse rights."
   },
@@ -867,8 +867,8 @@
       "type": "life",
       "title": "A life that stays with us",
       "subtitle": "Sydney, Australia",
-      "description": "Sam Neill died suddenly in Sydney at 78, surrounded by family. His whānau said he remained cancer-free and asked for privacy as they mourned an immeasurable loss. No official cause of death was disclosed in their announcement.",
-      "longDescription": "Across more than five decades, he moved easily between New Zealand stories, Australian cinema, European art films, Hollywood adventures, television, documentary work, writing, and wine. The performances remain — and so do the memories people made while watching them.",
+      "description": "Sam Neill died in a Sydney hospital at 78, surrounded by family. His whānau called the loss sudden and unexpected, and said he remained cancer-free. Two days later his manager of nineteen years, Philip Grenz, confirmed the cause was pneumonia — an illness that reached him only months after CAR T-cell therapy had beaten his lymphoma.",
+      "longDescription": "His co-star Rima Te Wiata remembered his response to falling ill, which was entirely in character: \"Oh for goodness sake I just got over my cancer and now look, now I get pneumonia. What next?\" Grenz said the family would honour him with a private memorial at his farm in New Zealand — he was, in his manager's words, an intensely private man who loathed a fuss. Across more than five decades, he moved easily between New Zealand stories, Australian cinema, European art films, Hollywood adventures, television, documentary work, writing, and wine. The performances remain — and so do the memories people made while watching them.",
       "layout": "image-right",
       "images": [
         {
@@ -882,7 +882,7 @@
       "featured": true,
       "animation": { "preset": "memorial", "intensity": "subtle" },
       "theme": { "background": "midnight" },
-      "tags": ["farewell", "legacy", "memorial"],
+      "tags": ["farewell", "legacy", "memorial", "health"],
       "sources": [
         {
           "title": "New Zealand actor Sam Neill dies aged 78",
@@ -893,6 +893,16 @@
           "title": "Love you Sam — Tributes flow for Kiwi screen legend",
           "publisher": "1News",
           "url": "https://www.1news.co.nz/2026/07/13/love-you-sam-tributes-flow-for-kiwi-screen-legend/"
+        },
+        {
+          "title": "Sam Neill cause of death revealed as pneumonia by manager",
+          "publisher": "Newsweek",
+          "url": "https://www.newsweek.com/sam-neill-cause-of-death-revealed-as-pneumonia-by-manager-12202486"
+        },
+        {
+          "title": "Sir Sam Neill had pneumonia before death in Sydney, co-star says",
+          "publisher": "NZ Herald",
+          "url": "https://www.nzherald.co.nz/nz/sir-sam-neill-had-pneumonia-before-death-in-sydney-co-star-says/NRSRGK45RBCMXHPMWKSTJ6HZIQ/"
         }
       ]
     }
